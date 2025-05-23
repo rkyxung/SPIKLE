@@ -1,0 +1,374 @@
+@font-face {
+  font-family: 'Pretendard';
+  src: url('fonts/Pretendard-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('fonts/Pretendard-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('fonts/Pretendard-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('fonts/Pretendard-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+* {
+  box-sizing: border-box;
+  font-family: "Pretendard", "Poppins", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+body {
+  background: #111111;
+  width: 100%;
+}
+
+#original {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+  /* display: none; */
+}
+
+/*----------------------------- 헤더 -----------------------------*/
+
+header {
+  display: flex;
+  position: absolute;
+  max-width: 86.46%;
+  width: 100%;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3.5vh;
+  justify-content: space-between;
+}
+
+#nav {
+  /* position: absolute; */
+  right: 0;
+  /* 566px */
+  width: 29.3vw;
+  /* 40px */
+  height: 3.7vh;
+  padding: 0;
+  display: flex;
+  gap: 2.8vw;
+  border: 0.05vw solid #C8FF04;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav li {
+  font-family: "Poppins";
+  color: #C8FF04;
+  /* 22px / 22.08 */
+  font-size: 1.1vw;
+  list-style: none;
+}
+
+#navLogo {
+  /* position: absolute; */
+  /* left: 6.7vw; */
+  width: 3vw;
+  height: auto;
+  background-color: #C8FF04;
+  border-radius: 100%;
+}
+
+/*----------------------------- 메인배너 -----------------------------*/
+
+.mainBanner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mainBanner * {
+  position: absolute;
+}
+
+#mainLogo {
+  top: 15.7vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32.15vw;
+  height: auto;
+}
+
+#Slogan {
+  top: 12.1vh;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1.28vw;
+}
+
+#mainMockUp {
+  top: 28vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84.6vw;
+  height: auto;
+}
+
+.Badge {
+  height: auto;
+}
+
+#Badge01 {
+  width: 15vw;
+  top: 58.3vh;
+  left: -3.5vw;
+}
+
+#Badge02 {
+  width: 19vw;
+  top: 51.5vh;
+  left: 11vw;
+}
+
+#Badge03 {
+  width: 17vw;
+  top: 58.5vh;
+  right: 11vw;
+
+}
+
+#Badge04 {
+  width: 17vw;
+  top: 58.5vh;
+  right: -5.5vw;
+}
+
+
+
+/* ----------------------------- 영상 섹션 ----------------------------- */
+
+.video {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #232323;
+}
+
+/* ----------------------------- 오버뷰 섹션 ----------------------------- */
+
+.overview {
+  position: relative;
+  max-width: 86.46%;
+  margin: 0 auto;
+  margin-top: 13vh;
+  height: 87.5vh;
+  background: #C8FF04;
+  border-radius: 2%;
+}
+
+#graph {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#overview {
+  position: absolute;
+  top: 6.5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  /* 20px */
+  font-size: 1.04vw;
+}
+
+#overviewTitle {
+  position: absolute;
+  top: 11.3vh;
+  left: 50%;
+  transform: translateX(-50%);
+  /* 40px */
+  font-size: 2.08vw;
+  font-weight: 600;
+  text-align: center;
+  line-height: 150%;
+}
+
+#spikeTxt {
+  font-weight: 700;
+}
+
+#overviewDescription {
+  position: absolute;
+  top: 26.5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.04vw;
+  font-weight: 400;
+  text-align: center;
+  line-height: 160%;
+}
+
+#overviewStar {
+  position: absolute;
+  top: 35.8vh;
+  right: 23.5vw;
+  /* 16px */
+  font-size: 0.8vw;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, .6);
+  line-height: 160%;
+  text-align: center;
+}
+
+#overviewStar img {
+  width: 2.79vw;
+}
+
+.point {
+  position: absolute;
+  font-size: 0.8vw;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, .6);
+  text-align: center;
+}
+
+.point img {
+  width: 1.19vw;
+}
+
+.point.one {
+  bottom: 2.2vh;
+  left: 15.1vw;
+  line-height: 280%;
+}
+
+.point.two {
+  bottom: 22vh;
+  right: 14.5vw;
+  line-height: 180%;
+}
+
+/* ----------------------------- 온라인서베이이 섹션 ----------------------------- */
+
+.onlineServey {
+  position: relative;
+  max-width: 86.46%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 13vh;
+  color: #fff;
+}
+
+#servey {
+  margin-top: 17vh;
+  font-size: 1.04vw;
+}
+
+#serveyTitle {
+  margin-top: 3vh;
+  font-size: 1.88vw;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+}
+
+.onlineServey ul {
+  display: flex;
+  margin-top: 4vh;
+  font-size: 0.88vw;
+  gap: 0.3vw;
+}
+
+.insight {
+  position: relative;
+  margin-top: 10.3vh;
+  height: 64vh;
+  border-radius: 20px;
+
+  
+  overflow: hidden;
+}
+
+.insight * {
+  position: absolute;
+}
+
+.label {
+  display: flex;
+  left: 4vw;
+  width: 6.2vw;
+  height: 3.5vh;
+  font-size: 0.95vw;
+  color: #000;
+  background-color: #D9D9D9;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 10px 10px;
+}
+
+.title {
+  top: 6.6vh;
+  left: 4vw;
+  font-size: 1.46vw;
+  letter-spacing: -0.016em;
+}
+
+.Question06 {
+  display: flex;
+  top: 15.5vh;
+  left: 4vw;
+  width: 20.4vw;
+  height: 5vh;
+  font-size: 0.88vw;
+  background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.Question07-2 {
+  display: flex;
+  top: 15.5vh;
+  right: 20.2vw;
+  width: 22.5vw;
+  height: 5vh;
+  font-size: 0.88vw;
+  background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+#Q6 {
+  top: 19.5vh;
+  left: 5.5vw;
+  width: 25vw;
+}
+
+#Q7-2 {
+  top: 28.5vh;
+  right: 8.5vw;
+  width: 34vw;
+}
