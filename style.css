@@ -55,8 +55,8 @@ body {
 /*----------------------------- 헤더 -----------------------------*/
 
 header {
-  display: flex;
   position: absolute;
+  display: flex;
   max-width: 86.46%;
   width: 100%;
   height: auto;
@@ -192,7 +192,8 @@ header {
 #graph {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  max-width: 100%;
+  height: 100%;
 }
 
 #overview {
@@ -231,10 +232,16 @@ header {
   line-height: 160%;
 }
 
+.overviewGraph {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 #overviewStar {
   position: absolute;
-  top: 35.8vh;
-  right: 23.5vw;
+  top: 41%;
+  right: 27.5%;
   /* 16px */
   font-size: 0.8vw;
   letter-spacing: 0;
@@ -260,14 +267,14 @@ header {
 }
 
 .point.one {
-  bottom: 2.2vh;
-  left: 15.1vw;
+  bottom: 2.4%;
+  left: 17.6%;
   line-height: 280%;
 }
 
 .point.two {
-  bottom: 22vh;
-  right: 14.5vw;
+  bottom: 25.2%;
+  right: 16.9%;
   line-height: 180%;
 }
 
@@ -291,7 +298,7 @@ header {
   margin-top: 3vh;
   font-size: 1.88vw;
   line-height: 150%;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
 }
 
 .onlineServey ul {
@@ -306,8 +313,9 @@ header {
   margin-top: 10.3vh;
   height: 64vh;
   border-radius: 20px;
+  background-color: rgba(44, 44, 44, .7);
 
-  
+
   overflow: hidden;
 }
 
@@ -371,4 +379,209 @@ header {
   top: 28.5vh;
   right: 8.5vw;
   width: 34vw;
+}
+
+.servey.flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5vh;
+}
+
+.painpoint,
+.needs {
+  background-color: rgba(44, 44, 44, .7);
+  width: 42vw;
+  border-radius: 20px;
+}
+
+.painpoint .label {
+  margin-left: 4vw;
+  width: 7vw;
+}
+
+.needs .label {
+  margin-left: 4vw;
+  width: 5.4vw;
+}
+
+.painpoint .title,
+.needs .title {
+  margin: 3.5vh 0 5.2vh 4vw;
+}
+
+.Question09-1 {
+  display: flex;
+  margin-left: 4vw;
+  width: 21.8vw;
+  height: 5vh;
+  font-size: 0.88vw;
+  background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+#Q9-1 {
+  margin: 4vh 0 4.5vh 4.5vw;
+  width: 33vw;
+}
+
+.Question11 {
+  display: flex;
+  margin-left: 4vw;
+  width: 20.5vw;
+  height: 5vh;
+  font-size: 0.88vw;
+  background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+#Q11 {
+  margin: 7.5vh 0 4.5vh 4vw;
+  width: 33vw;
+}
+
+#connectorLine {
+  display: flex;
+  margin: 0 auto;
+  height: 18.6vh;
+}
+
+/* ----------------------------- 인사이트 섹션 ----------------------------- */
+
+.insightSection {
+  display: flex;
+  /* Flex로 만듦 */
+  flex-direction: column;
+  /* 세로로 쌓기 */
+  justify-content: center;
+  /* 세로 중앙 정렬 */
+  align-items: center;
+  /* 가로 중앙 정렬 */
+  text-align: center;
+  /* 텍스트도 가운데 */
+  margin: 3vh auto;
+  max-width: 86.46%;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#starBg {
+  position: absolute;
+  width: 86.46%;
+  z-index: 0;
+}
+
+#insightTitle {
+  margin: 5.5vh 0 4.5vh 0;
+  font-size: 1.04vw;
+}
+
+#insightDescription {
+  margin: -0.5vh 0 7vh;
+  font-size: 1.95vw;
+  line-height: 160%;
+  z-index: 999;
+}
+
+#insightDescription span {
+  color: #C8FF04;
+}
+
+/* ----------------------------- 타겟 유저 섹션 ----------------------------- */
+.targetUsers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 29vh auto;
+  max-width: 86.46%;
+}
+
+#targetlabel {
+  color: #fff;
+  font-size: 1.04vw;
+}
+
+#targetTitle {
+  color: #fff;
+  margin-top: 2.6vh;
+  font-size: 1.98vw;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+}
+
+.targetUsers .grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5vw;
+}
+
+.targetUsers .grid * {
+  width: 31vw;
+  background-color: rgb(32, 32, 32);
+  border-radius: 15px;
+  color: #fff;
+  padding: 3.6vh 0 30vh 2vw;
+  font-size: 1.46vw;
+  font-weight: 600;
+  line-height: 150%;
+  overflow: hidden;
+  height: 38vh;
+}
+
+.grid #box01 {
+  margin-top: 16vh;
+  color: #000;
+  background-color: #C8FF04;
+}
+
+.grid #box02 {
+  margin-top: 26.5vh;
+}
+
+.grid #box03 {
+  margin-top: 6vh;
+}
+
+.grid #box04 {
+  margin-top: 16vh;
+}
+
+/*----------------------------- UX 플로우 섹션 -----------------------------*/
+
+.UXflow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  color: #fff;
+  max-width: 86.46%;
+
+}
+
+#flowLabel {
+  padding-top: 11vh;
+  font-size: 1.04vw;
+}
+
+#flowTitle {
+  padding-top: 2.5vh;
+  font-size: 1.98vw;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+}
+
+#flowTitle span {
+  color: #C8FF04;
+}
+
+#flowImg {
+  left: 0;
+  width: 100%;
+  margin-top: 13vh;
 }
