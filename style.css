@@ -42,16 +42,6 @@ body {
   width: 100%;
 }
 
-#original {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  opacity: 0.3;
-  /* display: none; */
-}
-
 /*----------------------------- 헤더 -----------------------------*/
 
 header {
