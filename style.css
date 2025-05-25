@@ -49,7 +49,7 @@ body {
   width: 100%;
   height: auto;
   opacity: 0.3;
-  display: none;
+  /* display: none; */
 }
 
 /*----------------------------- 헤더 -----------------------------*/
@@ -186,7 +186,7 @@ header {
   margin-top: 13vh;
   height: 87.5vh;
   background: #C8FF04;
-  border-radius: 2%;
+  border-radius: 20px;
 }
 
 #graph {
@@ -582,6 +582,761 @@ header {
 
 #flowImg {
   left: 0;
+  width: 92%;
+  margin-top: 14vh;
+}
+
+/* ----------------------------- 심볼볼 섹션 ----------------------------- */
+
+.Symbol {
+  max-width: 86.46%;
+  margin: 0 auto;
+  color: #fff;
+}
+
+#symbolLabel {
+  margin: 36.5vh 0 9vh;
+  font-size: 1.04vw;
+}
+
+#symbolTitle {
+  font-size: 1.04vw;
+  text-align: center;
+}
+
+#symbolSpikle {
+  width: 41vw;
+}
+
+#symbolSlogan {
+  margin: 4.3vh 0 9vh;
+  line-height: 170%;
+  letter-spacing: 0;
+}
+
+#symbolSlogan span {
+  font-weight: 400;
+  color: #C8FF04;
+}
+
+#symbolImgbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+#symbolLogobox {
+  background-color: #202020;
+  width: 49.2%;
+  padding: 11.5vh 0 9vh;
+  text-align: center;
+  border-radius: 15px;
+}
+
+#symbolLogobox img {
+  width: 37%;
+  align-items: center;
+}
+
+#symbolMockup {
+  width: 50%;
+}
+
+/* ----------------------------- 디자인 시스템 섹션 ----------------------------- */
+
+.DesignSystem {
+  max-width: 86.46%;
+  margin: 0 auto;
+  color: #fff;
+}
+
+#designLabel {
+  margin: 34.3vh 0 8vh;
+  font-size: 1.04vw;
+}
+
+#font {
+  display: flex;
+  justify-content: space-between;
+}
+
+#font div {
+  width: 49%;
+  padding: 5.5vh 0 4.5vh;
+  background-color: #202020;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#fontKOR p {
+  text-align: right;
   width: 100%;
-  margin-top: 13vh;
+  margin: 3.5vh 7vw 0 0;
+  font-size: 1.46vw;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+#fontENG p {
+  text-align: right;
+  width: 100%;
+  margin: 5vh 7vw 0 0;
+  font-size: 1.46vw;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+#fontKOR img {
+  padding: 8vh 0 1vh;
+  width: 18vw;
+}
+
+#fontENG img {
+  padding: 8vh 0 1vh;
+  width: 15.5vw;
+}
+
+#color {
+  display: flex;
+  height: 35vh;
+  ;
+  margin: 9vh 0;
+  justify-content: space-between;
+  font-size: 1.3vw;
+}
+
+#color div {
+  border-radius: 15px;
+}
+
+#main div,
+#sub02 div {
+  color: rgba(0, 0, 0, .4);
+}
+
+#main div {
+  font-family: 'Poppins';
+  margin: 3.5vh 3.7vw 1.2vh;
+}
+
+#sub01 div {
+  font-family: 'Poppins';
+  margin: 3.5vh 1.7vw 1.2vh;
+  color: rgba(232, 232, 232, 0.4);
+}
+
+#sub02 div {
+  font-family: 'Poppins';
+  margin: 3.5vh 1.7vw 1.2vh;
+}
+
+#color div p {
+  font-weight: 600;
+}
+
+#main {
+  width: 42vw;
+  background-color: #C8FF04;
+  color: #000;
+}
+
+#main p {
+  margin: 0 3.7vw 17vh;
+}
+
+#sub01 p,
+#sub02 p {
+  margin: 0 1.7vw 17vh;
+}
+
+#sub01 {
+  width: 20.5vw;
+  background-color: #191919;
+  color: #C8FF04;
+}
+
+#sub02 {
+  width: 20.5vw;
+  background-color: #e7e7e7;
+  color: #000;
+}
+
+#color span {
+  display: block;
+  text-align: right;
+  color: rgba(0, 0, 0, .4);
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.04vw;
+}
+
+#main span {
+  margin-right: 2.5vw;
+}
+
+#sub01 span {
+  color: rgba(255, 255, 255, 0.4);
+  margin-right: 1.5vw;
+}
+
+#sub02 span {
+  margin-right: 1.5vw;
+}
+
+
+/* ----------------------------- 디자인 시스템 섹션 ----------------------------- */
+
+.Marquee {
+  margin-top: 14vh;
+  overflow: hidden;
+}
+
+#Up,
+#Down {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  width: 110%;
+  margin-bottom: 3vh;
+}
+
+#Up {
+  transform: translateX(1%);
+}
+
+
+#Down {
+  transform: translateX(-2%);
+}
+
+.Marquee div div {
+  font-family: "Poppins";
+  font-size: 1.45vw;
+  color: #fff;
+  background: #1D1D1D;
+  padding: 1.5vh 2vw;
+  border: 0.035vw solid #333333;
+  border-radius: 40px;
+}
+
+.Marquee img {
+  width: 3vw;
+}
+
+#Down #hover {
+  background-color: #C8FF04;
+  color: #000;
+  border: 0vw;
+}
+
+/* ----------------------------- 핵심 컨셉 섹션 ----------------------------- */
+
+.concept {
+  color: #fff;
+  text-align: center;
+  margin-top: 43vh;
+}
+
+#conceptLogo {
+  width: 5.5vw;
+}
+
+.concept div {
+  margin: 9.5vh 0 2.5vh;
+  font-size: 1.98vw;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.concept div span {
+  color: #C8FF04;
+}
+
+.concept p {
+  font-size: 1.04vw;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 9vh;
+}
+
+#conceptMockup {
+  width: 76vw;
+}
+
+/* ----------------------------- 온보딩 섹션 ----------------------------- */
+
+.onboarding {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#onboardingTxt {
+  max-width: 86.46%;
+  margin: 0 auto;
+}
+
+#onboardingTxt div {
+  margin-top: 65.6vh;
+  color: #C8FF04;
+  font-size: 1.04vw;
+}
+
+.onboarding p {
+  margin-top: 3.2vh;
+  font-size: 1.98vw;
+  color: #fff;
+  line-height: 150%;
+}
+
+.onboarding span {
+  color: #C8FF04;
+}
+
+#onboardingBg {
+  margin-top: 18vh;
+  width: 124%;
+  transform: translateX(-9.5%);
+}
+
+#onboardingImg {
+  position: relative;
+  margin-top: -85.5vh;
+}
+
+#onboardingMockUp {
+  width: 23.2vw;
+  margin: 0 57.5vw;
+}
+
+#Notifications01 {
+  position: absolute;
+  width: 30vw;
+  top: 36%;
+  right: 15%;
+}
+
+#Notifications02 {
+  position: absolute;
+  width: 30vw;
+  top: 50%;
+  right: 15%;
+}
+
+/* ----------------------------- 홈 섹션 ----------------------------- */
+.Home {
+  max-width: 100%;
+
+}
+
+#homeTxt {
+  max-width: 86.46%;
+  margin: 0 auto;
+}
+
+#HomeLabel {
+  margin: 42.5vh 0 3vh;
+  color: #C8FF04;
+  font-size: 1.04vw;
+}
+
+#HomeTitle {
+  color: #fff;
+  font-size: 1.98vw;
+  font-weight: 600;
+  line-height: 150%;
+  margin-bottom: 16.7vh;
+}
+
+#HomeGraph {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin-top: 25.5%;
+  z-index: 1;
+
+}
+
+/* 여기까지 고칠 거 없음 */
+
+#homeSection {
+  position: relative;
+  max-width: 86.46%;
+  margin: 0 auto;
+}
+
+#HomeMockup {
+  display: block;
+  position: relative;
+  width: 29.7%;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+#graphSection {
+  display: flex;
+  position: absolute;
+  top: 13%;
+  left: 0;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#graphSection img {
+  margin-left: 2vh;
+  width: 15vw;
+  height: auto;
+}
+
+#graphSection div p,
+#missionSection div p,
+#tipSection div p {
+  margin-top: 2vh;
+}
+
+
+#graphSection div div,
+#missionSection div div,
+#tipSection div div {
+  color: #C8FF04;
+  font-size: 1.3vw;
+  font-weight: 600;
+}
+
+#graphSection div p,
+#missionSection div p,
+#tipSection div p {
+  color: #fff;
+  font-size: 1.04vw;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+#missionSection {
+  display: flex;
+  position: absolute;
+  top: 31%;
+  left: 58.2%;
+  text-align: left;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#missionSection img {
+  width: 13vw;
+  height: auto;
+  transform: scaleX(-1);
+  margin-right: 3vh;
+}
+
+#tipSection {
+  display: flex;
+  position: absolute;
+  bottom: 15%;
+  left: 58.2%;
+  text-align: left;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#tipSection img {
+  width: 13vw;
+  height: auto;
+  transform: scaleX(-1);
+  margin-right: 3vh;
+}
+
+/* ----------------------------- AI카메라라 섹션 ----------------------------- */
+.AIcamera {
+  display: flex;
+  max-width: 86.46%;
+  margin: 50vh auto 0;
+  gap: 8.2vw;
+}
+
+#cameraTitle {
+  margin-top: 4.7vh;
+}
+
+#cameraTitle div {
+  font-size: 1.04vw;
+  color: #C8FF04;
+}
+
+#cameraTitle p {
+  margin-top: 2vh;
+  font-size: 1.98vw;
+  color: #fff;
+  line-height: 150%;
+}
+
+#cameraImg {
+  position: relative;
+  width: 50vw;
+  left: 8%;
+}
+
+#cameraMockup {
+  width: 23vw;
+  margin-left: 10vw;
+
+}
+
+#chicken,
+#gimbap {
+  position: absolute;
+}
+
+#chicken {
+  top: 29%;
+  left: 10%;
+  width: 14vw;
+}
+
+#gimbap {
+  top: 40%;
+  left: 52%;
+  width: 12.5vw;
+}
+
+/* ----------------------------- 미션 섹션 ----------------------------- */
+
+.Mission {
+  max-width: 86.46%;
+  margin: 38vh auto 0;
+}
+
+#missionTitle {
+  margin-top: 3.5vh;
+}
+
+#missionTitle div {
+  font-size: 1.04vw;
+  color: #C8FF04;
+}
+
+#missionTitle p {
+  margin-top: 2vh;
+  font-size: 1.98vw;
+  color: #fff;
+  line-height: 150%;
+}
+
+#MissionSection {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3.5vw;
+  overflow: visible;
+}
+
+#MissionSection img {
+  width: 20vw;
+  margin: 14vh 0 6.5vh;
+}
+
+#missionLeft .des,
+#missionCenter .des,
+#missionRight .des {
+  margin-left: 0.8vw;
+}
+
+#missionLeft div div,
+#missionCenter div div,
+#missionRight div div {
+  font-size: 1.3vw;
+  font-weight: 600;
+  color: #C8FF04;
+}
+
+#missionLeft div p,
+#missionCenter div p,
+#missionRight div p {
+  font-size: 1.04vw;
+  font-weight: 400;
+  color: #fff;
+  line-height: 160%;
+  margin-top: 2vh;
+}
+
+#missionLeft {
+  margin-top: 49vh;
+}
+
+#missionCenter {
+  margin-top: 8.5vh;
+}
+
+#missionRight {
+  margin-top: -33vh;
+}
+
+/* ----------------------------- 커뮤니티 섹션 ----------------------------- */
+.community {
+  display: flex;
+  max-width: 86.46%;
+  margin: 67vh auto 0;
+  gap: 5.5vw;
+  align-items: flex-start;
+}
+
+#communityTitle div {
+  font-size: 1.04vw;
+  color: #C8FF04;
+}
+
+#communityTitle p {
+  margin-top: 2vh;
+  font-size: 1.98vw;
+  color: #fff;
+  line-height: 150%;
+}
+
+.community img {
+  display: block;
+}
+
+#communityImg {
+  position: relative;
+  display: flex;
+  gap: 5.7vw;
+}
+
+#feed {
+  width: 20.5vw;
+  height: 78vh;
+}
+
+#postImg {
+  position: relative;
+  width: 25vw;
+  overflow: visible;
+}
+
+#post {
+  width: 19vw;
+  height: auto;
+  right: 0;
+}
+
+#yejun,
+#gayoung {
+  position: absolute;
+  width: 21vw;
+  left: -0.9vw;
+}
+
+#yejun {
+  top: 72.5%;
+}
+
+#gayoung {
+  top: 87%;
+}
+
+/*----------------------------- 프로필 섹션 -----------------------------*/
+.profile {
+  max-width: 86.46%;
+  margin: 42.5vh auto;
+}
+
+#profileTitle div {
+  font-size: 1.04vw;
+  color: #C8FF04;
+}
+
+#profileTitle p {
+  margin-top: 2vh;
+  font-size: 1.98vw;
+  color: #fff;
+  line-height: 150%;
+}
+
+#profileImg {
+  margin: 17.5vh 0 0;
+  display: flex;
+  gap: 1.5vw;
+}
+
+#profile01,
+#profile02,
+#profile03,
+#profile04 {
+  width: 36vw;
+  height: 38.5vh;
+  margin-top: 26vh;
+
+}
+
+#profileMockup {
+  width: 53vw;
+}
+
+/*----------------------------- 전체목업 섹션 -----------------------------*/
+.fullMockup {
+  margin-top: -10vh;
+  width: 100%;
+  height: 110vh;
+  background: #202020;
+}
+
+/*----------------------------- 푸터 -----------------------------*/
+footer {
+  max-width: 86.46%;
+  height: 37vh;
+  margin: 0 auto;
+  display: flex;
+  gap: 33.6vw;
+  align-items: center;
+  /* background-color: rgba(255, 255, 255, .4); */
+}
+
+footer img {
+  width: 13.1vw;
+}
+
+#footerSection p {
+  margin-top: 1vh;
+  font-size: 1.04vw;
+  font-weight: 400;
+  color: #a7a7a7;
+}
+
+#teams {
+  margin-top: 6vh;
+  display: flex;
+  gap: 6.2vw;
+}
+
+#teams div div {
+  font-family: "Poppins";
+  font-size: 1.04vw;
+  color: #C8FF04;
+}
+
+#teams div p {
+  margin-top: 1vh;
+  font-size: 1.04vw;
+  color: #e8e8e8;
+}
+
+.top {
+  position: fixed;
+  display: flex;
+  font-family: "Poppins";
+  font-size: 1.04vw;
+  bottom: 11.5vh;
+  right: 6.5vw;
+  width: 4.5vw;
+  height: 4.5vw;
+  background: #C8FF04;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  z-index: 999;
 }
