@@ -862,6 +862,8 @@ header {
   position: relative;
   max-width: 100%;
   margin: 0 auto;
+  height: auto;
+  overflow: visible;
 }
 
 #onboardingTxt {
@@ -895,6 +897,8 @@ header {
 #onboardingImg {
   position: relative;
   margin-top: -85.5vh;
+  height: auto;
+  overflow: visible;
 }
 
 #onboardingMockUp {
@@ -1204,6 +1208,7 @@ header {
 #postImg {
   position: relative;
   width: 25vw;
+  height: auto;
   overflow: visible;
 }
 
@@ -1319,8 +1324,8 @@ footer img {
   display: flex;
   font-family: "Poppins";
   font-size: 1.04vw;
-  bottom: 11.5vh;
-  right: 6.5vw;
+  bottom: 7.5vh;
+  right: 5vw;
   width: 4.5vw;
   height: 4.5vw;
   background: #C8FF04;
