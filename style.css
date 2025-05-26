@@ -1192,6 +1192,7 @@ header {
 
 .community img {
   display: block;
+  overflow: visible;
 }
 
 #communityImg {
@@ -1227,11 +1228,11 @@ header {
 }
 
 #yejun {
-  top: 72.5%;
+  top: 72.4%;
 }
 
 #gayoung {
-  top: 87%;
+  top: 86.8%;
 }
 
 /*----------------------------- 프로필 섹션 -----------------------------*/
