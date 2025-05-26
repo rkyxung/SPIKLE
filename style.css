@@ -1202,7 +1202,8 @@ header {
 
 #feed {
   width: 20.5vw;
-  height: 78vh;
+  height: 78%;
+  /* height: auto; */
 }
 
 #postImg {
@@ -1262,7 +1263,8 @@ header {
 #profile03,
 #profile04 {
   width: 36vw;
-  height: 38.5vh;
+  /* height: 38.5vh; */
+  height: 38.5%;
   margin-top: 26vh;
 
 }
