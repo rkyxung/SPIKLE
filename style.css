@@ -40,6 +40,7 @@
 body {
   background: #111111;
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 #original {
@@ -64,6 +65,8 @@ header {
   transform: translateX(-50%);
   top: 3.5vh;
   justify-content: space-between;
+  z-index: 999;
+  overflow: visible;
 }
 
 #nav {
@@ -81,11 +84,13 @@ header {
   border-radius: 20px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 #nav:hover {
   background-color: #C8FF04;
-} 
+  color: #111111;
+}
 
 #nav:hover li {
   color: #111111;
@@ -103,14 +108,11 @@ header {
 #navLogo {
   /* position: absolute; */
   /* left: 6.7vw; */
-  width: 3vw;
+  width: 2.9vw;
   height: auto;
-  background-color: #C8FF04;
   border-radius: 100%;
   cursor: pointer;
-  pointer-events: auto;
 }
-
 
 /*----------------------------- 메인배너 -----------------------------*/
 
@@ -119,6 +121,8 @@ header {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  scroll-snap-align: start;
+  /* 시작 지점에 맞춰 스냅 */
 }
 
 .mainBanner * {
@@ -131,6 +135,8 @@ header {
   transform: translateX(-50%);
   width: 32.15vw;
   height: auto;
+  opacity: 0;
+  animation: LogoFadeIn 2s ease-in forwards;
 }
 
 #Slogan {
@@ -139,18 +145,51 @@ header {
   transform: translateX(-50%);
   color: #fff;
   font-size: 1.28vw;
+  opacity: 0;
+  animation: LogoFadeIn 2s ease-in forwards;
 }
 
-#mainMockUp {
+/* #mainMockUp {
   top: 28vh;
   left: 50%;
-  transform: translateX(-50%);
   width: 84.6vw;
   height: auto;
+  opacity: 0;
+  animation: fadeUp 3s ease-out forwards;
+} */
+
+#mainMockUpBg {
+  top: 38.5vh;
+  left: 13%;
+  width: 73vw;
+  height: auto;
+  opacity: 0;
+  animation: mainMockUpFadeIn 2s ease-in forwards;
+
+}
+
+#mainMockUp01 {
+  top: 43vh;
+  left: 29.5%;
+  width: 20vw;
+  height: auto;
+  opacity: 0;
+  animation: mainMockUpFadeIn 2s ease-in forwards;
+}
+
+#mainMockUp02 {
+  top: 49.5vh;
+  left: 52%;
+  width: 19vw;
+  height: auto;
+  opacity: 0;
+  animation: mainMockUpFadeIn 2s ease-in forwards;
 }
 
 .Badge {
   height: auto;
+  opacity: 0;
+  animation: mainMockUpFadeIn 2s ease-in forwards;
 }
 
 #Badge01 {
@@ -169,7 +208,6 @@ header {
   width: 17vw;
   top: 58.5vh;
   right: 11vw;
-
 }
 
 #Badge04 {
@@ -178,6 +216,20 @@ header {
   right: -5.5vw;
 }
 
+/* ----------------------------- 스크롤인터렉션 섹션 ----------------------------- */
+.scroll-wrapper {
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* 크롬, 엣지, 사파리 */
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+  /* 스크롤바 자체를 안 보이게 함 */
+}
 
 
 /* ----------------------------- 영상 섹션 ----------------------------- */
@@ -188,6 +240,8 @@ header {
   height: 100vh;
   overflow: hidden;
   background-color: #232323;
+  scroll-snap-align: start;
+  /* 시작 지점에 맞춰 스냅 */
 }
 
 /* ----------------------------- 오버뷰 섹션 ----------------------------- */
@@ -200,6 +254,7 @@ header {
   height: 87.5vh;
   background: #C8FF04;
   border-radius: 20px;
+  scroll-snap-align: start;
 }
 
 #graph {
@@ -808,9 +863,9 @@ header {
 }
 
 
-/* ----------------------------- 디자인 시스템 섹션 ----------------------------- */
+/* ----------------------------- 마퀴퀴 섹션 ----------------------------- */
 
-.Marquee {
+/* .Marquee {
   margin-top: 16vh;
   overflow: hidden;
 }
@@ -827,11 +882,13 @@ header {
 
 #Up {
   transform: translateX(1%);
+  animation: marqueeLeft 8s linear infinite;
 }
 
 
 #Down {
   transform: translateX(-2%);
+  animation: marqueeRight 10s linear infinite;
 }
 
 .Marquee div div {
@@ -849,10 +906,61 @@ header {
   width: 3vw;
 }
 
-#Down #hover {
+.Marquee div div:Hover {
   background-color: #C8FF04;
   color: #000;
-  border: 0vw;
+  border: 0.035vw solid #C8FF04;
+} */
+
+
+.Marquee {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  padding: 3vh 0;
+  margin-top: 16vh;
+}
+
+.marquee-track {
+  display: flex;
+  width: fit-content;
+  animation: scrollLeft 11s linear infinite;
+}
+
+.marquee-track.reverse {
+  animation: scrollRight 16s linear infinite;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  white-space: nowrap;
+}
+
+.marquee-content div {
+  font-family: "Poppins";
+  font-size: 1.45vw;
+  color: #fff;
+  background: #1D1D1D;
+  padding: 1.5vh 2vw;
+  border: 0.035vw solid #333333;
+  border-radius: 40px;
+  font-weight: 400;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.marquee-content div:hover {
+  background-color: #C8FF04;
+  color: #000;
+  border-color: #C8FF04;
+}
+
+.marquee-content img {
+  width: 3vw;
+  height: auto;
 }
 
 /* ----------------------------- 핵심 컨셉 섹션 ----------------------------- */
@@ -1404,7 +1512,8 @@ footer {
   max-width: 81.25%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column; /* ✅ 세로 정렬 */
+  flex-direction: column;
+  /* ✅ 세로 정렬 */
   padding-top: 10vh;
   padding-bottom: 5vh;
 }
@@ -1492,6 +1601,7 @@ footer {
   min-height: 30px;
   max-width: 70px;
   max-height: 70px;
+  border-radius: 100%;
   width: 3vw;
   height: 3vw;
   z-index: 999;

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animation.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -32,39 +33,44 @@
   <img id="top" src="img/Top.png" alt="top button">
 
   <!-- 메인 -->
-  <div class="mainBanner">
-    <img id="mainMockUp" src="img/mainMockUp.png" alt="mainMockUp" />
-    <img class="Badge" id="Badge01" src="img/Badge01.png" alt="Badge01" />
-    <img class="Badge" id="Badge02" src="img/Badge02.png" alt="Badge02" />
-    <img class="Badge" id="Badge03" src="img/Badge03.png" alt="Badge03" />
-    <img class="Badge" id="Badge04" src="img/Badge04.png" alt="Badge04" />
-    <img id="mainLogo" src="img/mainLogo.png" alt="mainLogo" />
-    <div id="Slogan">즐거운 습관이 되는 건강관리 서비스</div>
-  </div>
-
-  <!-- 비디오 -->
-  <div class="video"></div>
-
-  <!-- 오버뷰 -->
-  <div class="overview">
-    <div id="overview"> OVERVIEW </div>
-    <div id="overviewTitle">바쁜 일상 속, <span id="spikeTxt">스파이크</span>가 <br> 찾아오고 있어요!</div>
-    <div id="overviewDescription">스피클은 건강한 식습관과 생활습관을 실천하고 싶은 사람들을 위한 개인 맞춤형 건강 서비스로, <br>
-      일상 속에서 무리 없이 실천 가능한 미션을 통해 나에게 맞는 루틴 형성을 도와줍니다.
+  <div class="scroll-wrapper">
+    <div class="mainBanner">
+      <!-- <img id="mainMockUp" src="img/mainMockUp.png" alt="mainMockUp" /> -->
+      <img id="mainMockUpBg" src="img/mainMockUpBg.png" alt="목업 원" />
+      <img id="mainMockUp01" src="img/mainMockUp01.png" alt="MockUp01" />
+      <img id="mainMockUp02" src="img/mainMockUp02.png" alt="MockUp02" />
+      <img class="Badge" id="Badge01" src="img/Badge01.png" alt="Badge01" />
+      <img class="Badge" id="Badge02" src="img/Badge02.png" alt="Badge02" />
+      <img class="Badge" id="Badge03" src="img/Badge03.png" alt="Badge03" />
+      <img class="Badge" id="Badge04" src="img/Badge04.png" alt="Badge04" />
+      <img id="mainLogo" src="img/mainLogo.png" alt="mainLogo" />
+      <div id="Slogan">즐거운 습관이 되는 건강관리 서비스</div>
     </div>
-    <div class="overviewGraph">
-      <img id="graph" src="img/Graph.png" alt="그래프" />
-      <div id="overviewStar">
-        혈당 스파이크 <br>
-        <img src="img/overviewStar.png" alt="혈당스파이크 포인트" />
+
+    <!-- 비디오 -->
+    <div class="video"></div>
+
+    <!-- 오버뷰 -->
+    <div class="overview">
+      <div id="overview"> OVERVIEW </div>
+      <div id="overviewTitle">바쁜 일상 속, <span id="spikeTxt">스파이크</span>가 <br> 찾아오고 있어요!</div>
+      <div id="overviewDescription">스피클은 건강한 식습관과 생활습관을 실천하고 싶은 사람들을 위한 개인 맞춤형 건강 서비스로, <br>
+        일상 속에서 무리 없이 실천 가능한 미션을 통해 나에게 맞는 루틴 형성을 도와줍니다.
       </div>
-      <div class="point one">
-        잔여 혈당 <br>
-        <img src="img/Graph_point.png" alt="잔여할당 포인트" />
-      </div>
-      <div class="point two">
-        <img src="img/Graph_point.png" alt="저혈당 포인트" /> <br>
-        저혈당
+      <div class="overviewGraph">
+        <img id="graph" src="img/Graph.png" alt="그래프" />
+        <div id="overviewStar">
+          혈당 스파이크 <br>
+          <img src="img/overviewStar.png" alt="혈당스파이크 포인트" />
+        </div>
+        <div class="point one">
+          잔여 혈당 <br>
+          <img src="img/Graph_point.png" alt="잔여할당 포인트" />
+        </div>
+        <div class="point two">
+          <img src="img/Graph_point.png" alt="저혈당 포인트" /> <br>
+          저혈당
+        </div>
       </div>
     </div>
   </div>
@@ -218,7 +224,7 @@
   </div>
 
   <!-- 마퀴 섹션 -->
-  <div class="Marquee">
+  <!-- <div class="Marquee">
     <div id="Up">
       <img src="img/Camera.png" alt="camera img" />
       <div>SHARE</div>
@@ -232,19 +238,80 @@
       <div>SHARE</div>
       <div>BADGE</div>
     </div>
+    
 
     <div id="Down">
       <div>PERSONALIZE</div>
       <div>SHARE</div>
       <img id="" src="img/Clock.png" alt="Clock img" />
       <div>MISSION</div>
-      <div id="hover">PERSONALIZE</div>
+      <div>PERSONALIZE</div>
       <img src="img/Star.png" alt="Star img" />
       <div>ROUTINE</div>
       <div>SPIKE ALARM</div>
       <div>AI CAMERA</div>
       <img src="img/Star.png" alt="Star img" />
       <div>ROUTINE</div>
+    </div>
+  </div> -->
+
+  <!-- 마퀴 섹션 -->
+  <div class="Marquee">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <img src="img/Camera.png" alt="camera img" />
+        <div>SHARE</div>
+        <div>SPIKE ALARM</div>
+        <div>AI CAMERA</div>
+        <img src="img/Camera.png" alt="camera img" />
+        <div>SHARE</div>
+        <div>BADGE</div>
+        <img src="img/Clock.png" alt="Clock img" />
+        <div>MISSION</div>
+        <div>SHARE</div>
+        <div>BADGE</div>
+
+        <img src="img/Camera.png" alt="camera img" />
+        <div>SHARE</div>
+        <div>SPIKE ALARM</div>
+        <div>AI CAMERA</div>
+        <img src="img/Camera.png" alt="camera img" />
+        <div>SHARE</div>
+        <div>BADGE</div>
+        <img src="img/Clock.png" alt="Clock img" />
+        <div>MISSION</div>
+        <div>SHARE</div>
+        <div>BADGE</div>
+      </div>
+    </div>
+
+    <div class="marquee-track reverse">
+      <div class="marquee-content">
+        <div>PERSONALIZE</div>
+        <div>SHARE</div>
+        <img src="img/Clock.png" alt="Clock img" />
+        <div>MISSION</div>
+        <div>PERSONALIZE</div>
+        <img src="img/Star.png" alt="Star img" />
+        <div>ROUTINE</div>
+        <div>SPIKE ALARM</div>
+        <div>AI CAMERA</div>
+        <img src="img/Star.png" alt="Star img" />
+        <div>ROUTINE</div>
+
+        <div>PERSONALIZE</div>
+        <div>SHARE</div>
+        <img src="img/Clock.png" alt="Clock img" />
+        <div>MISSION</div>
+        <div>PERSONALIZE</div>
+        <img src="img/Star.png" alt="Star img" />
+        <div>ROUTINE</div>
+        <div>SPIKE ALARM</div>
+        <div>AI CAMERA</div>
+        <img src="img/Star.png" alt="Star img" />
+        <div>ROUTINE</div>
+        
+      </div>
     </div>
   </div>
 
