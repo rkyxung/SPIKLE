@@ -76,10 +76,19 @@ header {
   padding: 0;
   display: flex;
   gap: 2.8vw;
+  background-color: #111111;
   border: 0.05vw solid #C8FF04;
   border-radius: 20px;
   justify-content: center;
   align-items: center;
+}
+
+#nav:hover {
+  background-color: #C8FF04;
+} 
+
+#nav:hover li {
+  color: #111111;
 }
 
 #nav li {
@@ -88,6 +97,7 @@ header {
   /* 22px / 22.08 */
   font-size: 1.1vw;
   list-style: none;
+  font-weight: 400;
 }
 
 #navLogo {
@@ -97,7 +107,10 @@ header {
   height: auto;
   background-color: #C8FF04;
   border-radius: 100%;
+  cursor: pointer;
+  pointer-events: auto;
 }
+
 
 /*----------------------------- 메인배너 -----------------------------*/
 
@@ -307,6 +320,10 @@ header {
   font-size: 0.88vw;
   gap: 0.3vw;
   opacity: .5;
+}
+
+.onlineServey li {
+  font-weight: 400;
 }
 
 .insight {
@@ -612,6 +629,7 @@ header {
 
 #symbolSlogan {
   margin: 4.4vh 0 9vh;
+  font-weight: 400;
   line-height: 170%;
   letter-spacing: 0;
   color: rgba(255, 255, 255, .8);
@@ -677,7 +695,7 @@ header {
   width: 100%;
   margin: 3.8vh 4.9vw 0 0;
   font-size: 1.46vw;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0;
   color: rgba(255, 255, 255, .3);
 }
@@ -687,7 +705,7 @@ header {
   width: 100%;
   margin: 5.4vh 5.2vw 0 0;
   font-size: 1.46vw;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0;
   color: rgba(255, 255, 255, .3);
 }
@@ -824,6 +842,7 @@ header {
   padding: 1.5vh 2vw;
   border: 0.035vw solid #333333;
   border-radius: 40px;
+  font-weight: 400;
 }
 
 .Marquee img {
@@ -964,7 +983,6 @@ header {
 #HomeTitle {
   color: #fff;
   font-size: 1.875vw;
-  font-weight: 600;
   line-height: 150%;
   margin-bottom: 16.7vh;
 }
@@ -1041,7 +1059,6 @@ header {
 #tipSection div div {
   color: #C8FF04;
   font-size: 1.3vw;
-  font-weight: 600;
 }
 
 #graphSection div p,
@@ -1198,7 +1215,6 @@ header {
 #missionRight div div,
 #collectionDes div {
   font-size: 1.3vw;
-  font-weight: 600;
   color: #C8FF04;
 }
 
@@ -1419,6 +1435,7 @@ footer {
   font-family: "Poppins";
   font-size: 0.93vw;
   color: #C8FF04;
+  font-weight: 400;
 }
 
 #teams div p {
