@@ -42,12 +42,22 @@ body {
   width: 100%;
 }
 
+#original {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: .5;
+  display: none;
+}
+
 /*----------------------------- 헤더 -----------------------------*/
 
 header {
   position: absolute;
   display: flex;
-  max-width: 86.46%;
+  max-width: 81.25%;
   width: 100%;
   height: auto;
   left: 50%;
@@ -171,7 +181,7 @@ header {
 
 .overview {
   position: relative;
-  max-width: 86.46%;
+  max-width: 81.25%;
   margin: 0 auto;
   margin-top: 13vh;
   height: 87.5vh;
@@ -272,7 +282,7 @@ header {
 
 .onlineServey {
   position: relative;
-  max-width: 86.46%;
+  max-width: 81.25%;
   height: auto;
   margin: 0 auto;
   margin-top: 13vh;
@@ -296,6 +306,7 @@ header {
   margin-top: 4vh;
   font-size: 0.88vw;
   gap: 0.3vw;
+  opacity: .5;
 }
 
 .insight {
@@ -315,7 +326,7 @@ header {
 
 .label {
   display: flex;
-  left: 4vw;
+  left: 3vw;
   width: 6.2vw;
   height: 3.5vh;
   font-size: 0.95vw;
@@ -328,7 +339,7 @@ header {
 
 .title {
   top: 6.6vh;
-  left: 4vw;
+  left: 3vw;
   font-size: 1.46vw;
   letter-spacing: -0.016em;
 }
@@ -336,11 +347,12 @@ header {
 .Question06 {
   display: flex;
   top: 15.5vh;
-  left: 4vw;
+  left: 3vw;
   width: 20.4vw;
   height: 5vh;
   font-size: 0.88vw;
   background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, .6);
   align-items: center;
   justify-content: center;
   border-radius: 6px;
@@ -349,11 +361,12 @@ header {
 .Question07-2 {
   display: flex;
   top: 15.5vh;
-  right: 20.2vw;
+  right: 15.2vw;
   width: 22.5vw;
   height: 5vh;
   font-size: 0.88vw;
   background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, .6);
   align-items: center;
   justify-content: center;
   border-radius: 6px;
@@ -361,13 +374,13 @@ header {
 
 #Q6 {
   top: 19.5vh;
-  left: 5.5vw;
+  left: 2vw;
   width: 25vw;
 }
 
 #Q7-2 {
   top: 28.5vh;
-  right: 8.5vw;
+  right: 3.5vw;
   width: 34vw;
 }
 
@@ -375,6 +388,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin-top: 5vh;
+  gap: 1.6vw;
 }
 
 .painpoint,
@@ -385,51 +399,53 @@ header {
 }
 
 .painpoint .label {
-  margin-left: 4vw;
+  margin-left: 3vw;
   width: 7vw;
 }
 
 .needs .label {
-  margin-left: 4vw;
+  margin-left: 3vw;
   width: 5.4vw;
 }
 
 .painpoint .title,
 .needs .title {
-  margin: 3.5vh 0 5.2vh 4vw;
+  margin: 3.3vh 0 5.3vh 3vw;
 }
 
 .Question09-1 {
   display: flex;
-  margin-left: 4vw;
+  margin-left: 3vw;
   width: 21.8vw;
   height: 5vh;
   font-size: 0.88vw;
   background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, .6);
   align-items: center;
   justify-content: center;
   border-radius: 6px;
 }
 
 #Q9-1 {
-  margin: 4vh 0 4.5vh 4.5vw;
+  margin: 4vh 0 4.5vh 3.3vw;
   width: 33vw;
 }
 
 .Question11 {
   display: flex;
-  margin-left: 4vw;
+  margin-left: 3vw;
   width: 20.5vw;
   height: 5vh;
   font-size: 0.88vw;
   background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, .6);
   align-items: center;
   justify-content: center;
   border-radius: 6px;
 }
 
 #Q11 {
-  margin: 7.5vh 0 4.5vh 4vw;
+  margin: 7.5vh 0 4.5vh 3vw;
   width: 33vw;
 }
 
@@ -443,17 +459,12 @@ header {
 
 .insightSection {
   display: flex;
-  /* Flex로 만듦 */
   flex-direction: column;
-  /* 세로로 쌓기 */
   justify-content: center;
-  /* 세로 중앙 정렬 */
   align-items: center;
-  /* 가로 중앙 정렬 */
   text-align: center;
-  /* 텍스트도 가운데 */
-  margin: 3vh auto;
-  max-width: 86.46%;
+  margin: 2vh auto;
+  max-width: 81.25%;
   color: #fff;
   align-items: center;
   justify-content: center;
@@ -463,12 +474,12 @@ header {
 
 #starBg {
   position: absolute;
-  width: 86.46%;
+  width: 81.25%;
   z-index: 0;
 }
 
 #insightTitle {
-  margin: 5.5vh 0 4.5vh 0;
+  margin: 6.5vh 0 4.5vh 0;
   font-size: 1.04vw;
 }
 
@@ -489,7 +500,7 @@ header {
   flex-direction: column;
   justify-content: center;
   margin: 29vh auto;
-  max-width: 86.46%;
+  max-width: 81.25%;
 }
 
 #targetlabel {
@@ -500,7 +511,7 @@ header {
 #targetTitle {
   color: #fff;
   margin-top: 2.6vh;
-  font-size: 1.98vw;
+  font-size: 1.875vw;
   line-height: 150%;
   letter-spacing: -0.02em;
 }
@@ -516,30 +527,31 @@ header {
   background-color: rgb(32, 32, 32);
   border-radius: 15px;
   color: #fff;
-  padding: 3.6vh 0 30vh 2vw;
-  font-size: 1.46vw;
-  font-weight: 600;
+  padding: 3.5vh 0 25vh 1.9vw;
+  font-size: 1.37vw;
+  font-weight: 500;
   line-height: 150%;
   overflow: hidden;
-  height: 38vh;
+  height: 35vh;
 }
 
 .grid #box01 {
-  margin-top: 16vh;
+  margin-top: 14vh;
   color: #000;
+  font-weight: 600;
   background-color: #C8FF04;
 }
 
 .grid #box02 {
-  margin-top: 26.5vh;
+  margin-top: 24vh;
 }
 
 .grid #box03 {
-  margin-top: 6vh;
+  margin-top: 4.5vh;
 }
 
 .grid #box04 {
-  margin-top: 16vh;
+  margin-top: 14vh;
 }
 
 /*----------------------------- UX 플로우 섹션 -----------------------------*/
@@ -550,18 +562,18 @@ header {
   justify-content: center;
   margin: 0 auto;
   color: #fff;
-  max-width: 86.46%;
+  max-width: 81.25%;
 
 }
 
 #flowLabel {
-  padding-top: 11vh;
+  padding-top: 4.8vh;
   font-size: 1.04vw;
 }
 
 #flowTitle {
   padding-top: 2.5vh;
-  font-size: 1.98vw;
+  font-size: 1.875vw;
   line-height: 150%;
   letter-spacing: -0.02em;
 }
@@ -572,20 +584,20 @@ header {
 
 #flowImg {
   left: 0;
-  width: 92%;
-  margin-top: 14vh;
+  width: 100%;
+  margin-top: 22vh;
 }
 
 /* ----------------------------- 심볼볼 섹션 ----------------------------- */
 
 .Symbol {
-  max-width: 86.46%;
+  max-width: 81.25%;
   margin: 0 auto;
   color: #fff;
 }
 
 #symbolLabel {
-  margin: 36.5vh 0 9vh;
+  margin: 45.5vh 0 1.9vh;
   font-size: 1.04vw;
 }
 
@@ -599,9 +611,10 @@ header {
 }
 
 #symbolSlogan {
-  margin: 4.3vh 0 9vh;
+  margin: 4.4vh 0 9vh;
   line-height: 170%;
   letter-spacing: 0;
+  color: rgba(255, 255, 255, .8);
 }
 
 #symbolSlogan span {
@@ -634,13 +647,13 @@ header {
 /* ----------------------------- 디자인 시스템 섹션 ----------------------------- */
 
 .DesignSystem {
-  max-width: 86.46%;
+  max-width: 81.25%;
   margin: 0 auto;
   color: #fff;
 }
 
 #designLabel {
-  margin: 34.3vh 0 8vh;
+  margin: 39.6vh 0 7vh;
   font-size: 1.04vw;
 }
 
@@ -662,19 +675,21 @@ header {
 #fontKOR p {
   text-align: right;
   width: 100%;
-  margin: 3.5vh 7vw 0 0;
+  margin: 3.8vh 4.9vw 0 0;
   font-size: 1.46vw;
   font-weight: 600;
   letter-spacing: 0;
+  color: rgba(255, 255, 255, .3);
 }
 
 #fontENG p {
   text-align: right;
   width: 100%;
-  margin: 5vh 7vw 0 0;
+  margin: 5.4vh 5.2vw 0 0;
   font-size: 1.46vw;
   font-weight: 600;
   letter-spacing: 0;
+  color: rgba(255, 255, 255, .3);
 }
 
 #fontKOR img {
@@ -689,11 +704,11 @@ header {
 
 #color {
   display: flex;
-  height: 35vh;
-  ;
-  margin: 9vh 0;
+  height: 34.5vh;
+  margin: 7vh 0;
   justify-content: space-between;
   font-size: 1.3vw;
+  gap: 1.4vw;
 }
 
 #color div {
@@ -707,18 +722,18 @@ header {
 
 #main div {
   font-family: 'Poppins';
-  margin: 3.5vh 3.7vw 1.2vh;
+  margin: 3vh 2.8vw 1.2vh;
 }
 
 #sub01 div {
   font-family: 'Poppins';
-  margin: 3.5vh 1.7vw 1.2vh;
+  margin: 3vh 2.2vw 1.2vh;
   color: rgba(232, 232, 232, 0.4);
 }
 
 #sub02 div {
   font-family: 'Poppins';
-  margin: 3.5vh 1.7vw 1.2vh;
+  margin: 3vh 2.2vw 1.2vh;
 }
 
 #color div p {
@@ -732,12 +747,12 @@ header {
 }
 
 #main p {
-  margin: 0 3.7vw 17vh;
+  margin: 0 2.8vw 17.7vh;
 }
 
 #sub01 p,
 #sub02 p {
-  margin: 0 1.7vw 17vh;
+  margin: 0 2.2vw 17.7vh;
 }
 
 #sub01 {
@@ -758,28 +773,27 @@ header {
   color: rgba(0, 0, 0, .4);
   font-family: 'Poppins';
   font-weight: 500;
-  font-style: italic;
   font-size: 1.04vw;
 }
 
 #main span {
-  margin-right: 2.5vw;
+  margin-right: 2.8vw;
 }
 
 #sub01 span {
   color: rgba(255, 255, 255, 0.4);
-  margin-right: 1.5vw;
+  margin-right: 2.2vw;
 }
 
 #sub02 span {
-  margin-right: 1.5vw;
+  margin-right: 2.2vw;
 }
 
 
 /* ----------------------------- 디자인 시스템 섹션 ----------------------------- */
 
 .Marquee {
-  margin-top: 14vh;
+  margin-top: 16vh;
   overflow: hidden;
 }
 
@@ -827,7 +841,7 @@ header {
 .concept {
   color: #fff;
   text-align: center;
-  margin-top: 43vh;
+  margin-top: 44vh;
 }
 
 #conceptLogo {
@@ -835,8 +849,8 @@ header {
 }
 
 .concept div {
-  margin: 9.5vh 0 2.5vh;
-  font-size: 1.98vw;
+  margin: 6vh 0 3.2vh;
+  font-size: 1.875vw;
   font-weight: 600;
   line-height: 150%;
 }
@@ -850,10 +864,11 @@ header {
   font-weight: 400;
   line-height: 160%;
   margin-bottom: 9vh;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #conceptMockup {
-  width: 76vw;
+  width: 63vw;
 }
 
 /* ----------------------------- 온보딩 섹션 ----------------------------- */
@@ -864,22 +879,30 @@ header {
   margin: 0 auto;
   height: auto;
   overflow: visible;
+  text-align: center;
+}
+
+#onboardingLine {
+  position: absolute;
+  margin-top: -8.5vh;
+  width: 0.12vw;
+  z-index: -1;
 }
 
 #onboardingTxt {
-  max-width: 86.46%;
+  max-width: 81.25%;
   margin: 0 auto;
 }
 
 #onboardingTxt div {
-  margin-top: 65.6vh;
+  margin-top: 46vh;
   color: #C8FF04;
   font-size: 1.04vw;
 }
 
 .onboarding p {
   margin-top: 3.2vh;
-  font-size: 1.98vw;
+  font-size: 1.875vw;
   color: #fff;
   line-height: 150%;
 }
@@ -889,12 +912,12 @@ header {
 }
 
 #onboardingBg {
-  margin-top: 18vh;
-  width: 124%;
-  transform: translateX(-9.5%);
+  margin-top: 9.5vh;
+  width: 123%;
+  transform: translateX(-9%);
 }
 
-#onboardingImg {
+/* #onboardingImg {
   position: relative;
   margin-top: -85.5vh;
   height: auto;
@@ -918,7 +941,7 @@ header {
   width: 30vw;
   top: 50%;
   right: 15%;
-}
+} */
 
 /* ----------------------------- 홈 섹션 ----------------------------- */
 .Home {
@@ -927,19 +950,20 @@ header {
 }
 
 #homeTxt {
-  max-width: 86.46%;
+  max-width: 81.25%;
   margin: 0 auto;
+  text-align: center;
 }
 
 #HomeLabel {
-  margin: 42.5vh 0 3vh;
+  margin: 53.5vh 0 3vh;
   color: #C8FF04;
   font-size: 1.04vw;
 }
 
 #HomeTitle {
   color: #fff;
-  font-size: 1.98vw;
+  font-size: 1.875vw;
   font-weight: 600;
   line-height: 150%;
   margin-bottom: 16.7vh;
@@ -958,14 +982,15 @@ header {
 
 #homeSection {
   position: relative;
-  max-width: 86.46%;
+  max-width: 81.25%;
   margin: 0 auto;
 }
 
 #HomeMockup {
   display: block;
   position: relative;
-  width: 29.7%;
+  width: 28.2%;
+  transform: translateX(-25%);
   margin: 0 auto;
   z-index: 2;
 }
@@ -973,16 +998,34 @@ header {
 #graphSection {
   display: flex;
   position: absolute;
-  top: 13%;
-  left: 0;
-  text-align: left;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  top: -5.2%;
+  left: 56.5%;
+  gap: 20px;
 }
 
-#graphSection img {
-  margin-left: 2vh;
-  width: 15vw;
+#graphSection>div {
+  display: flex;
+  align-items: center;
+  /* 세로 가운데 정렬 */
+  gap: 20px;
+}
+
+#HomeLineGraph {
+  width: 28.5%;
+  height: auto;
+  margin-top: 25vh;
+}
+
+#HomeGraph01 {
+  margin: -18vh 0 0 11.5vw;
+  width: 56%;
+  height: auto;
+}
+
+#HomeGraph02 {
+  margin: 0.7vh 0 0 11.5vw;
+  width: 56.5%;
   height: auto;
 }
 
@@ -1004,7 +1047,7 @@ header {
 #graphSection div p,
 #missionSection div p,
 #tipSection div p {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1.04vw;
   font-weight: 400;
   line-height: 160%;
@@ -1013,8 +1056,8 @@ header {
 #missionSection {
   display: flex;
   position: absolute;
-  top: 31%;
-  left: 58.2%;
+  top: 11%;
+  left: 0%;
   text-align: left;
   justify-content: space-between;
   align-items: flex-start;
@@ -1023,15 +1066,15 @@ header {
 #missionSection img {
   width: 13vw;
   height: auto;
-  transform: scaleX(-1);
-  margin-right: 3vh;
+  margin-top: 5.5vh;
+  margin-left: 6vh;
 }
 
 #tipSection {
   display: flex;
   position: absolute;
-  bottom: 15%;
-  left: 58.2%;
+  bottom: 14%;
+  left: 0%;
   text-align: left;
   justify-content: space-between;
   align-items: flex-start;
@@ -1040,20 +1083,24 @@ header {
 #tipSection img {
   width: 13vw;
   height: auto;
-  transform: scaleX(-1);
-  margin-right: 3vh;
+  margin-top: 5vh;
+  margin-left: 5.7vh;
 }
 
 /* ----------------------------- AI카메라라 섹션 ----------------------------- */
 .AIcamera {
+  width: 100%;
+  margin: 27vh auto 0;
+  background-color: #191919;
+}
+
+.AIcamera>div {
   display: flex;
-  max-width: 86.46%;
-  margin: 50vh auto 0;
-  gap: 8.2vw;
+  padding: 27vh 0 21.5vh;
 }
 
 #cameraTitle {
-  margin-top: 4.7vh;
+  margin-top: 5.5vh;
 }
 
 #cameraTitle div {
@@ -1062,25 +1109,25 @@ header {
 }
 
 #cameraTitle p {
-  margin-top: 2vh;
-  font-size: 1.98vw;
+  margin-top: 2.5vh;
+  font-size: 1.875vw;
   color: #fff;
   line-height: 150%;
 }
 
 #cameraImg {
   position: relative;
-  width: 50vw;
+  width: 49.5vw;
   left: 8%;
 }
 
 #cameraMockup {
-  width: 23vw;
-  margin-left: 10vw;
+  width: 20.7vw;
+  margin-left: 15vw;
 
 }
 
-#chicken,
+/* #chicken,
 #gimbap {
   position: absolute;
 }
@@ -1095,17 +1142,20 @@ header {
   top: 40%;
   left: 52%;
   width: 12.5vw;
-}
+} */
 
 /* ----------------------------- 미션 섹션 ----------------------------- */
 
 .Mission {
-  max-width: 86.46%;
-  margin: 38vh auto 0;
+  max-width: 100%;
+  margin-top: 32.5vh;
+  padding-bottom: 200vh;
+  /* height: 70vh; */
 }
 
 #missionTitle {
-  margin-top: 3.5vh;
+  max-width: 81.25%;
+  margin: 0 auto;
 }
 
 #missionTitle div {
@@ -1115,67 +1165,149 @@ header {
 
 #missionTitle p {
   margin-top: 2vh;
-  font-size: 1.98vw;
+  font-size: 1.875vw;
   color: #fff;
   line-height: 150%;
+  margin-top: 2.8vh;
 }
 
 #MissionSection {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  padding: 0 3.5vw;
   overflow: visible;
+  top: 3vh;
+  max-width: 81.25%;
+  margin: 0 auto;
 }
 
 #MissionSection img {
-  width: 20vw;
-  margin: 14vh 0 6.5vh;
+  width: 20.7vw;
+  height: auto;
 }
 
-#missionLeft .des,
-#missionCenter .des,
-#missionRight .des {
-  margin-left: 0.8vw;
+#missionCenter img {
+  margin-top: 14vh;
 }
 
-#missionLeft div div,
+
+#missionCenter .des {
+  margin: 39.5vh 7vw 0 0;
+}
+
 #missionCenter div div,
-#missionRight div div {
+#missionRight div div,
+#collectionDes div {
   font-size: 1.3vw;
   font-weight: 600;
   color: #C8FF04;
 }
 
-#missionLeft div p,
 #missionCenter div p,
-#missionRight div p {
+#missionRight div p,
+#collectionDes p {
   font-size: 1.04vw;
   font-weight: 400;
-  color: #fff;
+  color: rgba(255, 255, 255, .9);
   line-height: 160%;
   margin-top: 2vh;
 }
 
-#missionLeft {
-  margin-top: 49vh;
-}
 
 #missionCenter {
-  margin-top: 8.5vh;
+  display: flex;
+  position: absolute;
+  margin: 24vh;
+  left: -7.5%;
 }
 
 #missionRight {
+  position: absolute;
   margin-top: -33vh;
+  right: 0;
+}
+
+#missionRight>div {
+  display: flex;
+  gap: 8.1vw;
+  margin: 0;
+  justify-content: space-between;
+}
+
+#teamDes {
+  margin-top: 36vh;
+}
+
+#mission03 {
+  margin-top: 16vh;
+}
+
+#mission04 {
+  margin-top: 22.5vh;
+}
+
+#rankingDes {
+  margin-top: 76.2vh;
+}
+
+#CollectionSection {
+  display: flex;
+  position: relative;
+  top: 190vh;
+  gap: 2.3vw;
+  max-width: 81.25%;
+  margin: 0 auto;
+}
+
+#CollectionMockup01,
+#CollectionMockup02 {
+  width: 20.5vw;
+  height: auto;
+}
+
+#collectionDes {
+  margin: 1.3vh 0 0 2.4vw;
+}
+
+#DesImg {
+  position: absolute;
+  display: flex;
+  margin-top: 133vh;
+  left: 50%;
+  transform: translateX(10%);
+  gap: 0.8vw;
+  overflow: visible
+}
+
+#DesImg img {
+  width: 11.5vw;
+  height: auto;
+}
+
+#collectionImg01 {
+  transform: translateY(32%);
+}
+
+#collectionImg03 {
+  transform: translateY(57%);
+}
+
+#collectionImg04 {
+  transform: translateY(28%);
 }
 
 /* ----------------------------- 커뮤니티 섹션 ----------------------------- */
 .community {
+  width: 100%;
+  background-color: #191919;
+  margin-top: 12vh;
+}
+
+#communitySection {
+  max-width: 81.25%;
   display: flex;
-  max-width: 86.46%;
-  margin: 67vh auto 0;
-  gap: 5.5vw;
-  align-items: flex-start;
+  gap: 15vw;
+  justify-content: space-between;
+  margin: 30.5vh auto 20vh;
 }
 
 #communityTitle div {
@@ -1185,160 +1317,165 @@ header {
 
 #communityTitle p {
   margin-top: 2vh;
-  font-size: 1.98vw;
+  font-size: 1.875vw;
   color: #fff;
   line-height: 150%;
-}
-
-.community img {
-  display: block;
-  overflow: visible;
 }
 
 #communityImg {
   position: relative;
   display: flex;
-  gap: 5.7vw;
+  gap: 2vw;
 }
 
-#feed {
+#communityImg img {
   width: 20.5vw;
-  height: 78%;
+  height: auto;
   /* height: auto; */
 }
 
-#postImg {
-  position: relative;
-  width: 25vw;
-  height: auto;
-  overflow: visible;
-}
-
-#post {
-  width: 19vw;
-  height: auto;
-  right: 0;
-}
-
-#yejun,
-#gayoung {
+#communityTxt {
   position: absolute;
-  width: 21vw;
-  left: -0.9vw;
-}
-
-#yejun {
-  top: 72.4%;
-}
-
-#gayoung {
-  top: 86.8%;
+  width: 27.5%;
+  height: auto;
+  right: 17%;
+  margin-top: -58.2%;
 }
 
 /*----------------------------- 프로필 섹션 -----------------------------*/
-.profile {
-  max-width: 86.46%;
-  margin: 42.5vh auto;
+.myPage {
+  max-width: 81.25%;
+  margin: 21.5vh auto;
+  display: flex;
+  gap: 6.5vw;
 }
 
-#profileTitle div {
+#myPageTitle div {
   font-size: 1.04vw;
   color: #C8FF04;
+  margin-top: 5vh;
 }
 
-#profileTitle p {
+#myPageTitle p {
   margin-top: 2vh;
-  font-size: 1.98vw;
+  font-size: 1.875vw;
   color: #fff;
   line-height: 150%;
 }
 
-#profileImg {
-  margin: 17.5vh 0 0;
-  display: flex;
-  gap: 1.5vw;
-}
 
-#profile01,
-#profile02,
-#profile03,
-#profile04 {
-  width: 36vw;
-  /* height: 38.5vh; */
-  height: 38.5%;
-  margin-top: 26vh;
-
-}
-
-#profileMockup {
-  width: 53vw;
+#myPageMockup {
+  width: 20.5vw;
+  margin-left: 13.2vw;
 }
 
 /*----------------------------- 전체목업 섹션 -----------------------------*/
 .fullMockup {
-  margin-top: -10vh;
+  margin-top: -1vh;
+  width: 100vw;
+  height: 127vh;
+  overflow: hidden;
+}
+
+.fullMockup img {
   width: 100%;
-  height: 110vh;
-  background: #202020;
+  height: auto;
 }
 
 /*----------------------------- 푸터 -----------------------------*/
+
 footer {
-  max-width: 86.46%;
-  height: 37vh;
+  max-width: 81.25%;
   margin: 0 auto;
   display: flex;
-  gap: 33.6vw;
-  align-items: center;
-  /* background-color: rgba(255, 255, 255, .4); */
+  flex-direction: column; /* ✅ 세로 정렬 */
+  padding-top: 10vh;
+  padding-bottom: 5vh;
 }
 
-footer img {
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+#footerSection img {
   width: 13.1vw;
+  margin-top: 0.5vh;
 }
 
 #footerSection p {
   margin-top: 1vh;
-  font-size: 1.04vw;
-  font-weight: 400;
+  font-size: 0.93vw;
   color: #a7a7a7;
 }
 
 #teams {
-  margin-top: 6vh;
+  margin: 7vh 0.8vw 0 0;
   display: flex;
-  gap: 6.2vw;
+  gap: 6.6vw;
 }
 
 #teams div div {
   font-family: "Poppins";
-  font-size: 1.04vw;
+  font-size: 0.93vw;
   color: #C8FF04;
 }
 
 #teams div p {
-  margin-top: 1vh;
-  font-size: 1.04vw;
+  margin-top: 0.8vh;
+  font-size: 0.93vw;
   color: #e8e8e8;
 }
 
-.top {
+#footerLine {
+  margin-top: 3.8vh;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3vh;
+}
+
+.footerItem {
+  display: flex;
+  gap: 2.1vw;
+  justify-content: center;
+}
+
+.footerItem img {
+  width: 1.7vw;
+  height: auto;
+}
+
+.footerEt {
+  display: flex;
+  gap: 1.7vw;
+  justify-content: center;
+}
+
+.footerEt div {
+  font-size: 0.93vw;
+  font-weight: 400;
+  color: #a7a7a7;
+}
+
+/* 탑 버튼 */
+
+#top {
   position: fixed;
   display: flex;
   font-family: "Poppins";
-  font-size: 16px;
   bottom: 4vh;
-  right: 2.1vw;
-  min-width: 40px;
-  min-height: 40px;
+  right: 3vw;
+  min-width: 30px;
+  min-height: 30px;
   max-width: 70px;
   max-height: 70px;
-  width: 3.7vw;
-  height: 3.7vw;
-  background: #C8FF04;
-  color: #000;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100%;
+  width: 3vw;
+  height: 3vw;
   z-index: 999;
 }
