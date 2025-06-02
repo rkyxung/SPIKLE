@@ -865,6 +865,7 @@ header {
   width: 42vw;
   background-color: #C8FF04;
   color: #000;
+  z-index: 3;
 }
 
 #main p {
@@ -880,10 +881,11 @@ header {
   width: 20.5vw;
   background-color: #191919;
   color: #C8FF04;
+  z-index: 2;
 }
 
 #sub02 {
-  width: 20.5vw;
+  width: 20.45vw;
   background-color: #e7e7e7;
   color: #000;
 }
@@ -1017,6 +1019,8 @@ header {
   color: #fff;
   text-align: center;
   margin-top: 44vh;
+  overflow: hidden;
+  z-index: 2;
 }
 
 #conceptLogo {
@@ -1058,19 +1062,33 @@ header {
 }
 
 #onboardingLine {
-  position: absolute;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: -8.5vh;
-  width: 0.12vw;
-  z-index: -1;
+  width: 0.125vw;
+  height: 52.6vh;
+  z-index: -2;
 }
 
+/* #onboardingLineScreen {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -52.5vh;
+  width: 0.3vw;
+  height: 52.6vh;
+  background: #111;
+  z-index: -1;
+} */
+
 #onboardingTxt {
+
   max-width: 81.25%;
   margin: 0 auto;
 }
 
 #onboardingTxt div {
-  margin-top: 46vh;
   color: #C8FF04;
   font-size: 1.04vw;
 }

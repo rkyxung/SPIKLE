@@ -25,6 +25,25 @@ export function index() {
   const UXflow = document.querySelector(".UXflow");
   const UXScreen = document.getElementById("UXScreen");
   const UXImg = document.getElementById("flowImg");
+  const symbol = document.querySelector(".Symbol");
+  const symbolLogo = document.getElementById("symbolSpikle");
+  const symbolSlogan = document.getElementById("symbolSlogan");
+  const symbolImgs = document.getElementById("symbolImgbox");
+  const designSystem = document.querySelector(".DesignSystem");
+  const font = document.getElementById("font");
+  const colors = document.getElementById("color");
+  const mainColor = document.getElementById("main");
+  const subColor01 = document.getElementById("sub01");
+  const subColor02 = document.getElementById("sub02");
+  const conceptTitle = document.querySelector(".concept div");
+  const conceptTxt = document.querySelector(".concept p");
+  const conceptMockup = document.getElementById("conceptMockup");
+  const onboarding = document.querySelector(".onboarding");
+  const onboardingLine = document.getElementById("onboardingLine");
+  const onboardingLineScreen = document.getElementById("onboardingLineScreen");
+
+
+
 
 
   navLogo.addEventListener('mouseover', () => {
@@ -115,7 +134,7 @@ export function index() {
             insightLine.addEventListener("animationend", () => {
               setTimeout(() => {
                 insight.classList.add('insightAni');
-              }, 200);              
+              }, 200);
             })
           }, 500);
 
@@ -148,6 +167,81 @@ export function index() {
           UXImg.classList.add('show');
         }
 
+        //심볼
+        if (entry.target.classList.contains('Symbol')) {
+          symbol.classList.add('show');
+          symbolLogo.style.opacity = '0';
+          symbolSlogan.style.opacity = '0';
+          symbolImgs.style.opacity = '0';
+          symbol.addEventListener('animationend', () => {
+            symbolLogo.classList.add('opacity');
+            setTimeout(() => {
+              symbolSlogan.classList.add('symbolSloganShow');
+            }, 600)
+            symbolLogo.addEventListener('animationend', () => {
+              symbolImgs.classList.add('show');
+              symbolImgs.style.animationDuration = '0.7s';
+            })
+          })
+        }
+
+        //디자인시스템
+        if (entry.target.classList.contains('DesignSystem')) {
+          designSystem.classList.add('show');
+          font.style.opacity = '0';
+          colors.style.opacity = '0';
+          subColor01.style.opacity = '0';
+          subColor02.style.opacity = '0';
+          designSystem.addEventListener('animationend', () => {
+            font.classList.add('show');
+          })
+          font.addEventListener('animationend', () => {
+            colors.classList.add('show');
+            colors.style.animationDuration = '0.7s';
+          })
+
+          colors.addEventListener('animationend', () => {
+            subColor01.classList.add('subColor01');
+            subColor02.classList.add('subColor02');
+          })
+        }
+
+        //핵심컨셉
+        if (entry.target.id === "conceptTitle") {
+          conceptTitle.classList.add('symbolSloganShow');
+          conceptTitle.addEventListener('animationend', () => {
+            conceptTxt.classList.add('symbolSloganShow');
+          })
+          conceptTxt.addEventListener('animationend', () => {
+            conceptMockup.classList.add('show');
+            setTimeout(() => {
+              conceptMockup.classList.remove('show');
+              conceptMockup.style.opacity = '1';
+              conceptMockup.classList.add('UpDown01');
+            }, 1000);
+          })
+          // conceptMockup.addEventListener('animationend', () => {
+          //   conceptMockup.classList.remove('show');
+          //   conceptMockup.style.opacity = '1';
+          //   conceptMockup.classList.add('UpDown01');
+          // })
+        }
+
+        //온보딩
+        if (entry.target.id === "onboardingLine") {
+          onboardingLine.classList.remove('section');
+          // onboardingLineScreen.classList.add('onboardingLine');
+        }
+
+        // if (entry.target.classList.contains('onboarding')) {
+        //   onboarding.classList.add('show');
+        //   onboardingLine.style.opacity = '0';
+        //   onboarding.addEventListener('animationend', () => {
+        //     onboardingLine.classList.add('onboardingLine');
+        //   })
+
+        // }
+
       }
     });
   }, {
@@ -160,7 +254,8 @@ export function index() {
     observer.observe(el); // 해당 요소를 감시 대상으로 등록
   });
 
-  console.log(overview);
+  console.log(conceptTitle);
+  
 
 }
 

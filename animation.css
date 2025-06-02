@@ -42,6 +42,10 @@
   }
 }
 
+.UpDown01 {
+  animation: UpDown01 1.6s ease-in-out infinite alternate;
+}
+
 @keyframes UpDown01 {
   0% {
     transform: translateY(-1.5vh);
@@ -136,6 +140,7 @@
     opacity: 0;
     /* transform: translateX(-30px); */
   }
+
   100% {
     opacity: 1;
     /* transform: translateX(0); */
@@ -157,11 +162,15 @@
 }
 
 .show {
-  animation: show 1.5s linear forwards;
+  animation: show 1s linear forwards;
 }
 
 .BoxShow {
   animation: show 0.6s linear forwards;
+}
+
+.symbolSloganShow {
+  animation: symbolSloganShow 0.7s linear forwards;
 }
 
 
@@ -169,6 +178,18 @@
   0% {
     opacity: 0;
     transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes symbolSloganShow {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
 
   100% {
@@ -190,5 +211,62 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.subColor01 {
+  animation: sub01 0.7s linear forwards;
+}
+
+.subColor02 {
+  animation: sub02 1.4s linear forwards;
+}
+
+@keyframes sub01 {
+  0% {
+    opacity: 0;
+    transform: translateX(-20.55vw);
+  }
+
+  /* 80% {
+    opacity: 0.3;
+  } */
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes sub02 {
+  0% {
+    opacity: 0;
+    transform: translateX(-41.1vw);
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.onboardingLine {
+  animation: onboardingLine 1.5s linear forwards;
+}
+
+@keyframes onboardingLine {
+  0% {
+    opacity: 1;
+    height: 52.6vh;
+  }
+
+  100% {
+    opacity: 1;
+    height: 0;
   }
 }
