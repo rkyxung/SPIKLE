@@ -48,35 +48,38 @@
     </div>
 
     <!-- 비디오 -->
-    <div class="video"></div>
+    <div class="video">
+      <video id="video" src="img/spikleVideo.mp4" loop playsinline style="width: 100vw; height: auto;"></video>
+    </div>
+  </div>
 
-    <!-- 오버뷰 -->
-    <div class="overview">
-      <div id="overview"> OVERVIEW </div>
-      <div id="overviewTitle">바쁜 일상 속, <span id="spikeTxt">스파이크</span>가 <br> 찾아오고 있어요!</div>
-      <div id="overviewDescription">스피클은 건강한 식습관과 생활습관을 실천하고 싶은 사람들을 위한 개인 맞춤형 건강 서비스로, <br>
-        일상 속에서 무리 없이 실천 가능한 미션을 통해 나에게 맞는 루틴 형성을 도와줍니다.
+  <!-- 오버뷰 -->
+  <div class="overview section">
+    <div class="overviewGraph">
+      <img id="graph" src="img/Graph.png" alt="그래프" />
+      <div id="overviewStar">
+        혈당 스파이크 <br>
+        <img src="img/overviewStar.png" alt="혈당스파이크 포인트" />
       </div>
-      <div class="overviewGraph">
-        <img id="graph" src="img/Graph.png" alt="그래프" />
-        <div id="overviewStar">
-          혈당 스파이크 <br>
-          <img src="img/overviewStar.png" alt="혈당스파이크 포인트" />
-        </div>
-        <div class="point one">
-          잔여 혈당 <br>
-          <img src="img/Graph_point.png" alt="잔여할당 포인트" />
-        </div>
-        <div class="point two">
-          <img src="img/Graph_point.png" alt="저혈당 포인트" /> <br>
-          저혈당
-        </div>
+      <div class="point one">
+        잔여 혈당 <br>
+        <img src="img/Graph_point.png" alt="잔여할당 포인트" />
       </div>
+      <div class="point two">
+        <img src="img/Graph_point.png" alt="저혈당 포인트" /> <br>
+        저혈당
+      </div>
+    </div>
+    <div id="overviewScreen"></div>
+    <div id="overview"> OVERVIEW </div>
+    <div id="overviewTitle">바쁜 일상 속, <span id="spikeTxt">스파이크</span>가 <br> 찾아오고 있어요!</div>
+    <div id="overviewDescription">스피클은 건강한 식습관과 생활습관을 실천하고 싶은 사람들을 위한 개인 맞춤형 건강 서비스로, <br>
+      일상 속에서 무리 없이 실천 가능한 미션을 통해 나에게 맞는 루틴 형성을 도와줍니다.
     </div>
   </div>
 
   <!-- 온라인서베이 -->
-  <div class="onlineServey">
+  <div class="onlineServey section">
     <div id="servey">ONLINE SERVEY</div>
     <div id="serveyTitle">사람들은 꾸준한 습관을 위해 <br>
       어떤 것을 필요로 하고 있을까요?
@@ -104,7 +107,7 @@
     </div>
 
     <div class="servey flex">
-      <div class="painpoint">
+      <div class="painpoint section">
         <div class="label">
           <p>PAINPOINT</p>
         </div>
@@ -124,7 +127,7 @@
     </div>
   </div>
 
-  <img id="connectorLine" src="img/connectorLine.png" alt="인사이트 라인" />
+  <img id="connectorLine" class="section" src="img/connectorLine.png" alt="인사이트 라인" />
 
   <!-- 인사이트 -->
   <div class="insightSection">
@@ -136,7 +139,7 @@
   </div>
 
   <!-- 타겟 -->
-  <div class="targetUsers">
+  <div class="targetUsers section">
     <div id="targetlabel">TARGET USERS</div>
     <div id="targetTitle">건강 관리를 어려워하는 2030에게 <br>
       지속가능한 건강습관 형성을 도와줍니다
@@ -165,14 +168,20 @@
   </div>
 
   <!-- UX 플로우 -->
-  <div class="UXflow">
+  <div class="UXflow section">
     <div id="flowLabel">UX FLOW</div>
     <div id="flowTitle">AI 카메라 촬영, 피드백 알림, 미션을 <br>
       기반으로 <span>루틴을 형성</span>해 주는 것이 목표에요
     </div>
   </div>
 
-  <img id="flowImg" src="img/UXflow.png" alt="UX FLOW img" />
+  <!-- <div id="UXLine"></div> -->
+
+  <!-- <div id="UXScreen"></div> -->
+
+
+
+  <img id="flowImg" class="section" src="img/UXflow.png" alt="UX FLOW img" />
 
   <!-- 심볼 -->
   <div class="Symbol">
@@ -308,9 +317,7 @@
         <div>ROUTINE</div>
         <div>SPIKE ALARM</div>
         <div>AI CAMERA</div>
-        <img src="img/Star.png" alt="Star img" />
-        <div>ROUTINE</div>
-        
+
       </div>
     </div>
   </div>
@@ -508,7 +515,7 @@
     <div id="myPageTitle">
       <div>MYPAGE</div>
       <p>마이페이지에서 나의 정보와 <br>
-        미션하이라이트를 확인해요
+        미션 하이라이트를 확인해요
       </p>
     </div>
   </div>

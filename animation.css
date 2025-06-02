@@ -44,21 +44,21 @@
 
 @keyframes UpDown01 {
   0% {
-    transform: translateY(-2vh);
+    transform: translateY(-1.5vh);
   }
 
   100% {
-    transform: translateY(2vh);
+    transform: translateY(1.5vh);
   }
 }
 
 @keyframes UpDown02 {
   0% {
-    transform: translateY(2vh);
+    transform: translateY(1.5vh);
   }
 
   100% {
-    transform: translateY(-2vh);
+    transform: translateY(-1.5vh);
   }
 }
 
@@ -100,5 +100,95 @@
 
   100% {
     transform: translateX(0%);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.opacity {
+  animation: opacity 1.5s linear forwards;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeSlideIn {
+  animation: fadeSlideIn 2s linear forwards;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    /* transform: translateX(-30px); */
+  }
+  100% {
+    opacity: 1;
+    /* transform: translateX(0); */
+  }
+}
+
+.fadeScreen {
+  animation: fadeScreen 2.5s linear forwards;
+}
+
+@keyframes fadeScreen {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+
+.show {
+  animation: show 1.5s linear forwards;
+}
+
+.BoxShow {
+  animation: show 0.6s linear forwards;
+}
+
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.insightAni {
+  animation: insightAni 0.6s linear forwards;
+}
+
+@keyframes insightAni {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

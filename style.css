@@ -70,7 +70,7 @@ header {
 }
 
 #nav {
-  /* position: absolute; */
+  position: absolute;
   right: 0;
   /* 566px */
   width: 29.3vw;
@@ -78,22 +78,24 @@ header {
   height: 3.7vh;
   padding: 0;
   display: flex;
-  gap: 2.8vw;
+  /* gap: 2.8vw; */
   background-color: #111111;
-  border: 0.05vw solid #C8FF04;
+  border: 0.08vw solid #C8FF04;
   border-radius: 20px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  overflow: hidden;
 }
 
-#nav:hover {
+/* #nav:hover {
   background-color: #C8FF04;
   color: #111111;
-}
+} */
 
-#nav:hover li {
+#nav li:hover {
   color: #111111;
+  background-color: #C8FF04;
 }
 
 #nav li {
@@ -103,6 +105,9 @@ header {
   font-size: 1.1vw;
   list-style: none;
   font-weight: 400;
+  padding: 0.14vw 1.8vw;
+  background-color: #111;
+  border-radius: 20px;
 }
 
 #navLogo {
@@ -164,8 +169,7 @@ header {
   width: 73vw;
   height: auto;
   opacity: 0;
-  animation: mainMockUpFadeIn 2s ease-in forwards;
-
+  animation: mainMockUpFadeIn 2s ease-in forwards, rotate 4s linear infinite;
 }
 
 #mainMockUp01 {
@@ -189,7 +193,7 @@ header {
 .Badge {
   height: auto;
   opacity: 0;
-  animation: mainMockUpFadeIn 2s ease-in forwards;
+  animation: mainMockUpFadeIn 4s ease-in forwards;
 }
 
 #Badge01 {
@@ -231,6 +235,19 @@ header {
   /* 스크롤바 자체를 안 보이게 함 */
 }
 
+.section {
+  overflow: hidden;
+  opacity: 0;
+  /* 처음엔 보이지 않게 설정 */
+  /* 아래에서 위로 올라오는 효과 */
+  /* transform: translateY(50px); */
+  transition: all 2s ease-out;
+}
+
+/* .opacity {
+  opacity: 1;
+} */
+
 
 /* ----------------------------- 영상 섹션 ----------------------------- */
 
@@ -239,7 +256,7 @@ header {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #232323;
+  /* background-color: #fff; */
   scroll-snap-align: start;
   /* 시작 지점에 맞춰 스냅 */
 }
@@ -250,7 +267,7 @@ header {
   position: relative;
   max-width: 81.25%;
   margin: 0 auto;
-  margin-top: 13vh;
+  margin-top: 8vh;
   height: 87.5vh;
   background: #C8FF04;
   border-radius: 20px;
@@ -304,6 +321,15 @@ header {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+#overviewScreen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #C8FF04;
 }
 
 #overviewStar {
@@ -523,7 +549,7 @@ header {
 
 #connectorLine {
   display: flex;
-  margin: 0 auto;
+  margin: 5vh auto 0;
   height: 18.6vh;
 }
 
@@ -553,12 +579,15 @@ header {
 #insightTitle {
   margin: 6.5vh 0 4.5vh 0;
   font-size: 1.04vw;
+  letter-spacing: 0;
+  /* font-weight: 400; */
 }
 
 #insightDescription {
-  margin: -0.5vh 0 7vh;
+  margin: -2vh 0 7vh;
   font-size: 1.95vw;
   line-height: 160%;
+  /* font-weight: 400; */
   z-index: 999;
 }
 
@@ -592,6 +621,7 @@ header {
   display: flex;
   justify-content: space-between;
   gap: 1.5vw;
+  overflow-y: hidden;
 }
 
 .targetUsers .grid * {
@@ -637,6 +667,24 @@ header {
   max-width: 81.25%;
 
 }
+
+/* #UXLine {
+  position: absolute;
+  margin-top: 31vh;
+  width: 100%;
+  height: 1px;
+  background-color: #C8FF04;
+  z-index: -2;
+} */
+
+/* #UXScreen {
+  position: absolute;
+  margin-top: 20vh;
+  right: 0;
+  width: 100%;
+  height: 30vh;
+  background-color: #111;
+} */
 
 #flowLabel {
   padding-top: 4.8vh;
@@ -926,11 +974,11 @@ header {
 .marquee-track {
   display: flex;
   width: fit-content;
-  animation: scrollLeft 11s linear infinite;
+  animation: scrollLeft 17s linear infinite;
 }
 
 .marquee-track.reverse {
-  animation: scrollRight 16s linear infinite;
+  animation: scrollRight 17.5s linear infinite;
 }
 
 .marquee-content {
