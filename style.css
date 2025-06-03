@@ -1071,21 +1071,23 @@ header {
   z-index: -2;
 }
 
-/* #onboardingLineScreen {
+#onboardingLineScreen {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   margin-top: -52.5vh;
-  width: 0.3vw;
+  width: 0.5vw;
   height: 52.6vh;
   background: #111;
   z-index: -1;
-} */
+  transform-origin: bottom; /* 아래를 고정 기준점으로 설정 */
+}
 
 #onboardingTxt {
 
   max-width: 81.25%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 #onboardingTxt div {
@@ -1176,6 +1178,7 @@ header {
   position: relative;
   max-width: 81.25%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 #HomeMockup {
@@ -1185,7 +1188,9 @@ header {
   transform: translateX(-25%);
   margin: 0 auto;
   z-index: 2;
+  opacity: 0;
 }
+
 
 #graphSection {
   display: flex;
@@ -1213,12 +1218,14 @@ header {
   margin: -18vh 0 0 11.5vw;
   width: 56%;
   height: auto;
+  opacity: 0;
 }
 
 #HomeGraph02 {
   margin: 0.7vh 0 0 11.5vw;
   width: 56.5%;
   height: auto;
+  opacity: 0;
 }
 
 #graphSection div p,
@@ -1252,6 +1259,28 @@ header {
   text-align: left;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+/* #missionSectionTxt, */
+#tipSectionTxt {
+  transform: translateX(175%);
+  opacity: 0;
+}
+
+#missionLine,
+#tipLine {
+  transform: translateX(55%);
+  opacity: 0;
+}
+
+#HomeLineGraph {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+#HomeLineGraphTxt {
+  transform: translateX(-150%);
+  opacity: 0;
 }
 
 #missionSection img {
@@ -1297,6 +1326,9 @@ header {
 #cameraTitle div {
   font-size: 1.04vw;
   color: #C8FF04;
+  /* opacity: 0; */
+  transform: translateX(-25%);
+  opacity: 0;
 }
 
 #cameraTitle p {
@@ -1304,6 +1336,7 @@ header {
   font-size: 1.875vw;
   color: #fff;
   line-height: 150%;
+  opacity: 0;
 }
 
 #cameraImg {
@@ -1360,6 +1393,7 @@ header {
   color: #fff;
   line-height: 150%;
   margin-top: 2.8vh;
+  opacity: 0;
 }
 
 #MissionSection {
@@ -1374,6 +1408,7 @@ header {
 #MissionSection img {
   width: 20.7vw;
   height: auto;
+  z-index: 99;
 }
 
 #missionCenter img {
@@ -1383,6 +1418,8 @@ header {
 
 #missionCenter .des {
   margin: 39.5vh 7vw 0 0;
+  transform: translateX(140%);
+  opacity: 0;
 }
 
 #missionCenter div div,
@@ -1390,6 +1427,11 @@ header {
 #collectionDes div {
   font-size: 1.3vw;
   color: #C8FF04;
+}
+
+#missionRight div,
+#missionCenter {
+  overflow: hidden;
 }
 
 #missionCenter div p,
@@ -1425,18 +1467,28 @@ header {
 
 #teamDes {
   margin-top: 36vh;
+  transform: translateX(170%);
+  opacity: 0;
+}
+
+#mission02 {
+  opacity: 0;
 }
 
 #mission03 {
   margin-top: 16vh;
+  opacity: 0;
 }
 
 #mission04 {
   margin-top: 22.5vh;
+  opacity: 0;
 }
 
 #rankingDes {
   margin-top: 76.2vh;
+  transform: translateX(150%);
+  opacity: 0;
 }
 
 #CollectionSection {
@@ -1446,6 +1498,7 @@ header {
   gap: 2.3vw;
   max-width: 81.25%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 #CollectionMockup01,
@@ -1454,8 +1507,15 @@ header {
   height: auto;
 }
 
+#CollectionMockup02 {
+  transform: translateX(-112%);
+  z-index: -1;
+  opacity: 0;
+}
+
 #collectionDes {
   margin: 1.3vh 0 0 2.4vw;
+  opacity: 0;
 }
 
 #DesImg {
@@ -1471,6 +1531,7 @@ header {
 #DesImg img {
   width: 11.5vw;
   height: auto;
+  opacity: 0;
 }
 
 #collectionImg01 {
@@ -1498,6 +1559,7 @@ header {
   gap: 15vw;
   justify-content: space-between;
   margin: 30.5vh auto 20vh;
+  overflow: hidden;
 }
 
 #communityTitle div {
@@ -1510,12 +1572,14 @@ header {
   font-size: 1.875vw;
   color: #fff;
   line-height: 150%;
+  opacity: 0;
 }
 
 #communityImg {
   position: relative;
   display: flex;
   gap: 2vw;
+  opacity: 0;
 }
 
 #communityImg img {
@@ -1530,6 +1594,7 @@ header {
   height: auto;
   right: 17%;
   margin-top: -58.2%;
+  opacity: 0;
 }
 
 /*----------------------------- 프로필 섹션 -----------------------------*/
@@ -1538,12 +1603,14 @@ header {
   margin: 21.5vh auto;
   display: flex;
   gap: 6.5vw;
+  overflow: hidden;
 }
 
 #myPageTitle div {
   font-size: 1.04vw;
   color: #C8FF04;
   margin-top: 5vh;
+  opacity: 0;
 }
 
 #myPageTitle p {
@@ -1551,6 +1618,7 @@ header {
   font-size: 1.875vw;
   color: #fff;
   line-height: 150%;
+  opacity: 0;
 }
 
 

@@ -306,7 +306,7 @@
   <div id="onboardingLineScreen"></div>
 
   <!-- 온보딩 -->
-  <div class="onboarding">
+  <div class="onboarding section">
 
     <div id="onboardingTxt">
       <div>ONBOARDING</div>
@@ -323,7 +323,7 @@
   </div>
 
   <!-- 홈 -->
-  <div class="Home">
+  <div class="Home section">
     <div id="homeTxt">
       <div id="HomeLabel">HOME</div>
       <p id="HomeTitle">메인 홈에서 일일미션, 혈당그래프, <br>
@@ -335,19 +335,19 @@
       <img id="HomeMockup" src="img/HomeMockup.png" alt="home mockup" />
 
       <div id="missionSection">
-        <div>
+        <div id="missionSectionTxt">
           <div>일일 미션</div>
           <p>간단한 일일미션을 수행하여, <br>
             지속적인 실천을 유도하고 있어요.
           </p>
         </div>
-        <img src="img/HomeLine.png" alt="home line" />
+        <img id="missionLine" src="img/HomeLine.png" alt="home line" />
       </div>
 
       <div id="graphSection">
         <div>
           <img id="HomeLineGraph" src="img/HomeLineGraph.png" alt="home line" />
-          <div>
+          <div id="HomeLineGraphTxt">
             <div>혈당 그래프</div>
             <p>사용자의 기본 정보와, AI 촬영을 통한 식단분석으로, <br>
               혈당 그래프를 예측하여 혈당 스파이크 예방을 도와줘요.
@@ -359,13 +359,13 @@
       </div>
 
       <div id="tipSection">
-        <div>
+        <div id="tipSectionTxt">
           <div>건강 팁</div>
           <p>다양한 건강 팁을 안내하여,<br>
             전반적인 건강을 체크할 수 있어요.
           </p>
         </div>
-        <img src="img/HomeLine.png" alt="home line" />
+        <img id="tipLine" src="img/HomeLine.png" alt="home line" />
       </div>
     </div>
   </div>
@@ -373,7 +373,7 @@
   <!-- AI 카메라 -->
   <div class="AIcamera">
     <div>
-      <div id="cameraImg">
+      <div id="cameraImg" class="section">
         <!-- <img id="chicken" src="img/chicken.png" alt="camera chicken" /> -->
         <img id="cameraMockup" src="img/cameraMockUp.png" alt="camera mockup" />
         <!-- <img id="gimbap" src="img/gimbap.png" alt="camera gimbap" /> -->
@@ -390,7 +390,7 @@
 
   <!-- 미션 -->
   <div class="Mission">
-    <div id="missionTitle">
+    <div id="missionTitle" class="section">
       <div>MISSION</div>
       <p>개인, 팀 미션으로 <br>
         함께 미션을 수행해요
@@ -414,7 +414,7 @@
         </div>
       </div> -->
 
-      <div id="missionCenter">
+      <div id="missionCenter" class="section">
         <div class="des">
           <div>개인미션</div>
           <p>개인미션을 통해 맞춤형 습관개선을 도와줍니다. <br>
@@ -441,12 +441,12 @@
               누적, 일간, 주간, 월간으로 볼 수 있습니다.
             </p>
           </div>
-          <img id="mission04" src="img/mission04.png" alt="mission04 mockup" />
+          <img id="mission04" class="section" src="img/mission04.png" alt="mission04 mockup" />
         </div>
       </div>
     </div>
     <div id="CollectionSection">
-      <img id="CollectionMockup01" src="img/mission01.png" alt="" />
+      <img id="CollectionMockup01" class="section" src="img/mission01.png" alt="" />
       <img id="CollectionMockup02" src="img/profileMockUp.png" alt="" />
       <div class="des" id="collectionDes">
         <div>컬렉션</div>
@@ -466,14 +466,14 @@
   <!-- 커뮤니티 -->
   <div class="community">
     <div id="communitySection">
-      <div id="communityTitle">
+      <div id="communityTitle" class="section">
         <div>COMMUNITY</div>
         <p>피드로 서로 발전하는 모습을 <br>
           공유하며 동기를 부여해요</p>
       </div>
       <div id="communityImg">
         <img id="feed" src="img/feed.png" alt="feed mockup" />
-        <img id="feed" src="img/record.png" alt="feed mockup" />
+        <img id="record" src="img/record.png" alt="feed mockup" />
       </div>
     </div>
     <img id="communityTxt" src="img/communitytxt.png" alt="FEED RECORDED" />
@@ -481,7 +481,7 @@
 
   <!-- 마이페이지지 -->
   <div class="myPage">
-    <img id="myPageMockup" src="img/MyPage.png" alt="myPage Mockup" />
+    <img id="myPageMockup" class="section" src="img/MyPage.png" alt="myPage Mockup" />
 
     <div id="myPageTitle">
       <div>MYPAGE</div>

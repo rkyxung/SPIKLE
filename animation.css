@@ -186,6 +186,38 @@
   }
 }
 
+.showDown {
+  animation: showDown 0.7s linear forwards;
+}
+
+@keyframes showDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.onboardingMockupShow {
+  animation: onboardingMockup 1s linear forwards;
+}
+
+@keyframes onboardingMockup {
+  0% {
+    opacity: 0;
+    transform: translate(-9%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-9%, -20px);
+  }
+}
+
 @keyframes symbolSloganShow {
   0% {
     opacity: 0;
@@ -261,12 +293,54 @@
 
 @keyframes onboardingLine {
   0% {
+    transform: translateX(-50%) scaleY(1);
+    /* 원래 크기 */
+  }
+
+  100% {
+    transform: translateX(-50%) scaleY(0);
+    /* 위에서 아래로 줄어듦 */
+  }
+}
+
+.missionLineAni {
+  animation: missionLineAni 0.5s linear forwards;
+}
+
+@keyframes missionLineAni {
+  100% {
+    transform: translateX(0);
     opacity: 1;
-    height: 52.6vh;
+  }
+}
+
+.missionTxtAni {
+  animation: missionTxtAni 1.6s linear forwards;
+}
+
+@keyframes missionTxtAni {
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.homeMockupShow {
+  animation: homeMockupShow 1s linear forwards;
+}
+
+@keyframes homeMockupShow {
+  0% {
+    opacity: 0;
+    transform: translate(-25%, 50px);
   }
 
   100% {
     opacity: 1;
-    height: 0;
+    transform: translate(-25%, 0);
   }
 }
