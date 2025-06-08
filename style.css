@@ -60,7 +60,7 @@ header {
   display: flex;
   max-width: 81.25%;
   width: 100%;
-  height: auto;
+  height: 5vh;
   left: 50%;
   transform: translateX(-50%);
   top: 3.5vh;
@@ -69,8 +69,17 @@ header {
   overflow: visible;
 }
 
-#nav {
+
+nav {
   position: absolute;
+  right: 0;
+  /* 566px */
+  width: 29.3vw;
+  /* 40px */
+  height: 3.7vh;
+}
+
+#nav {
   right: 0;
   /* 566px */
   width: 29.3vw;
@@ -78,11 +87,12 @@ header {
   height: 3.7vh;
   padding: 0;
   display: flex;
+  flex-direction: row;
   /* gap: 2.8vw; */
   background-color: #111111;
   border: 0.08vw solid #C8FF04;
   border-radius: 20px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
   overflow: hidden;
@@ -128,6 +138,7 @@ header {
   padding: 0.14vw 1.8vw;
   background-color: #111;
   border-radius: 20px;
+
 }
 
 #navLogo {
@@ -242,11 +253,14 @@ header {
 
 /* ----------------------------- 스크롤인터렉션 섹션 ----------------------------- */
 .scroll-wrapper {
-  height: 100%;
-  max-height: 100vh;
+  scroll-snap-type: y mandatory;  /* 세로 방향 스냅 고정 */
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+  height: 100vh;
+  scroll-behavior: auto;
+}
+.mainBanner, .video {
+  scroll-snap-align: start;       /* 각각 스냅 기준점 지정 */
+  height: 100vh;
 }
 
 /* 크롬, 엣지, 사파리 */
@@ -1176,7 +1190,7 @@ header {
   color: #C8FF04;
 }
 
-#onboadringGif {
+#onboardingGif {
   position: relative;
   width: 18vw;
   height: 75vh;

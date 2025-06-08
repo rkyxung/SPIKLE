@@ -1,5 +1,7 @@
 export function index() {
+  const header = document.querySelector("header");
   const navLogo = document.getElementById("navLogo");
+  const scrollWrapper = document.querySelector(".scroll-wrapper");
   const topBtn = document.getElementById("top");
   const mainMockUp01 = document.getElementById("mainMockUp01");
   const mainMockUp02 = document.getElementById("mainMockUp02");
@@ -45,6 +47,7 @@ export function index() {
   const onboardingTitle = document.querySelector("#onboardingTxt div");
   const onboardingTxt = document.querySelector("#onboardingTxt p")
   const onboardingMockup = document.getElementById("onboardingBg");
+  const onboardingGif = document.getElementById("onboardingGif");
   const Home = document.querySelector(".Home");
   const HomeTitle = document.getElementById("HomeLabel");
   const HomeTxt = document.getElementById("HomeTitle");
@@ -83,10 +86,10 @@ export function index() {
   const myPageMockup = document.getElementById("myPageMockup");
   const myPageTitle = document.querySelector("#myPageTitle div");
   const myPageTxt = document.querySelector("#myPageTitle p");
-  const box01 = document.getElementById("box01");
-  const box02 = document.getElementById("box02");
-  const box03 = document.getElementById("box03");
-  const box04 = document.getElementById("box04");
+  const navVideo = document.getElementById("nav01");
+  const navProject = document.getElementById("nav02");
+  const navDesign = document.getElementById("nav03");
+  const navService = document.getElementById("nav04");
 
   navLogo.addEventListener('mouseover', () => {
     navLogo.src = "img/navLogoHover.png";
@@ -95,6 +98,71 @@ export function index() {
   navLogo.addEventListener('mouseleave', () => {
     navLogo.src = "img/navLogo.png";
   });
+
+
+
+  navVideo.addEventListener("click", () => {
+    document.querySelector(".video").scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+
+  navProject.addEventListener("click", () => {
+    const target = document.querySelector(".overview");
+    const y = target.getBoundingClientRect().top + window.scrollY - 50;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth"
+
+    });
+  });
+
+  navDesign.addEventListener("click", () => {
+    const target = document.querySelector(".Symbol");
+    if (!target) return;
+
+    const y = target.getBoundingClientRect().top + window.scrollY - 50;
+    window.scrollTo({
+      top: y,
+      behavior: "smooth"
+    });
+  });
+
+  navService.addEventListener("click", () => {
+    const target = document.querySelector(".concept");
+    if (!target) return;
+
+    const y = target.getBoundingClientRect().top + window.scrollY - 50;
+    window.scrollTo({
+      top: y,
+      behavior: "smooth"
+    });
+  });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header"); // 헤더 요소 선택
+  const mainBanner = document.querySelector(".mainBanner"); // 메인배너 선택
+  const scrollWrapper = document.querySelector(".scroll-wrapper"); // 스크롤랩퍼 선택
+
+  scrollWrapper.addEventListener("scroll", () => {
+    const scrollY = scrollWrapper.scrollTop; // scroll-wrapper 내부 스크롤 위치
+    const mainBannerHeight = mainBanner.offsetHeight; // 메인배너 전체 높이
+    const hidePoint = mainBannerHeight / 2; // 메인배너 중간 지점 기준으로 숨김 판단
+
+    if (scrollY >= hidePoint) {
+      // 중간 아래로 내려갔으면 헤더 숨김
+      header.style.opacity = "0";
+      header.style.pointerEvents = "none";
+    } else {
+      // 중간 이상 올라왔으면 헤더 다시 보이게
+      header.style.opacity = "1";
+      header.style.pointerEvents = "auto";
+    }
+  });
+});
+
+
 
   topBtn.addEventListener('mouseover', () => {
     topBtn.src = "img/TopHover.png";
@@ -105,11 +173,32 @@ export function index() {
   });
 
   topBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0, // 맨 위로
-      behavior: "smooth" // 스르륵 올라가게
-    });
+    const wrapperTop = scrollWrapper.getBoundingClientRect().top;
+
+    if (wrapperTop < 0) {
+      // scroll-wrapper가 현재 화면 위에 있음 → 먼저 window 기준으로 이동
+      window.scrollTo({
+        top: scrollWrapper.offsetTop,
+        behavior: "smooth"
+      });
+
+      // 💡 약간의 시간 뒤에 scroll-wrapper 내부도 이동시킴
+      setTimeout(() => {
+        scrollWrapper.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }, 500); // 스크롤 타이밍에 맞춰 약간 지연 (필요 시 조절)
+    } else {
+      // scroll-wrapper 안에 있는 상태면 내부에서만 위로 스크롤
+      scrollWrapper.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
   });
+
+
 
   mainMockUp01.addEventListener('animationend', () => {
     mainMockUp01.style.opacity = "1";
@@ -126,17 +215,18 @@ export function index() {
     mainBadge04.style.animation = "UpDown02 1.7s ease-in-out infinite alternate";
   });
 
-  // 버튼 클릭 시 → 영상 재생 + 버튼 숨기기
+
+
   playBtn.addEventListener("click", () => {
-    video.play(); // 영상 재생
-    playBtn.style.display = "none"; // 버튼 숨김
+    video.play();
+    playBtn.style.display = "none";
   });
 
-  // 영상 클릭 시 → 재생 중이면 멈추고 버튼 보이게
+
   video.addEventListener("click", () => {
     if (!video.paused) {
-      video.pause(); // 영상 멈춤
-      playBtn.style.display = "block"; // 버튼 다시 보임
+      video.pause();
+      playBtn.style.display = "block";
     }
   });
 
@@ -162,14 +252,16 @@ export function index() {
           serveyNeeds.style.opacity = '0';
           setTimeout(() => {
             serveyInsight.classList.add('opacity');
-          }, 1200);
+            serveyInsight.style.animationDuration = '0.8s';
+          }, 700);
         }
         if (entry.target.classList.contains('painpoint')) {
           serveyPainpoint.classList.add('opacity');
           insight.style.opacity = '0';
           setTimeout(() => {
             serveyNeeds.classList.add('opacity');
-          }, 800);
+            serveyInsight.style.animationDuration = '0.8s';
+          }, 600);
         }
 
         //인사이트
@@ -203,7 +295,7 @@ export function index() {
             targetBox03.addEventListener('animationend', () => {
               targetBox04.classList.add('BoxShow');
             })
-          }, 1200)
+          }, 700)
         }
 
         // box03.addEventListener("mouseenter", () => {
@@ -221,6 +313,10 @@ export function index() {
         //UX 플로우
         if (entry.target.classList.contains('UXflow')) {
           UXflow.classList.add('show');
+          UXImg.style.opacity = '0';
+        }
+
+        if (entry.target.id === "flowImg") {
           UXImg.classList.add('show');
         }
 
@@ -232,9 +328,10 @@ export function index() {
           symbolImgs.style.opacity = '0';
           symbol.addEventListener('animationend', () => {
             symbolLogo.classList.add('opacity');
+            symbolLogo.style.animationDuration = '0.8s';
             setTimeout(() => {
               symbolSlogan.classList.add('symbolSloganShow');
-            }, 600)
+            }, 500)
             symbolLogo.addEventListener('animationend', () => {
               symbolImgs.classList.add('show');
               symbolImgs.style.animationDuration = '0.7s';
@@ -292,13 +389,18 @@ export function index() {
             onboarding.classList.add('showDown');
             onboardingTxt.style.opacity = '0';
             onboardingMockup.style.opacity = '0';
+            onboardingGif.style.opacity = '0';
           })
           onboarding.addEventListener('animationend', () => {
             onboardingTxt.classList.add('symbolSloganShow');
-            onboardingTxt.style.animationDuration = '1s';
+            onboardingTxt.style.animationDuration = '0.7s';
           })
           onboardingTxt.addEventListener('animationend', () => {
             onboardingMockup.classList.add('onboardingMockupShow');
+            onboardingGif.classList.add('onboardingGif');
+            onboardingGif.addEventListener('animationend', () => {
+              onboardingGif.src = "video/onboarding.gif";
+            }, 100);
           })
         }
 
@@ -309,7 +411,7 @@ export function index() {
           missionSectionTxt.style.opacity = '0';
           Home.addEventListener('animationend', () => {
             HomeTxt.classList.add('symbolSloganShow');
-            HomeTxt.style.animationDuration = '1s';
+            HomeTxt.style.animationDuration = '0.7s';
           })
           HomeTxt.addEventListener('animationend', () => {
             HomeMockup.classList.add('homeMockupShow');
@@ -322,14 +424,13 @@ export function index() {
           })
           missionLine.addEventListener('animationend', () => {
             missionSectionTxt.classList.add('symbolSloganShow');
-            missionSectionTxt.style.animationDuration = '0.5s';
           });
           missionSectionTxt.addEventListener('animationend', () => {
             HomeLineGraph.classList.add('missionLineAni');
+            HomeLineGraph.style.animationDuration = '0.6s'
           })
           HomeLineGraph.addEventListener('animationend', () => {
             HomeLineGraphTxt.classList.add('symbolSloganShow');
-            HomeLineGraphTxt.style.animationDuration = '0.5s'
           })
           HomeLineGraphTxt.addEventListener('animationend', () => {
             HomeGraphImg01.classList.add('opacity');
@@ -346,9 +447,12 @@ export function index() {
           })
         }
 
-        //온보딩
+        //AI카메라
         if (entry.target.id === "cameraImg") {
           AIcamera.classList.add('show');
+          AIcamera.addEventListener('animationend', () => {
+            AIcamera.src = "video/cameraMockUp.gif"
+          }, 100);
           AIcamera.addEventListener('animationend', () => {
             AItitle.classList.add('missionLineAni');
           })
@@ -366,6 +470,7 @@ export function index() {
           MissionSectionText.addEventListener('animationend', () => {
             missionImg03.classList.add('show');
             missionImg03.addEventListener('animationend', () => {
+              missionImg03.src = "video/mission03.gif";
               missionDes03.classList.add('missionLineAni');
               missionDes03.style.animationDuration = '0.7s';
             })
@@ -377,6 +482,7 @@ export function index() {
             missionImg02.classList.add('show');
           }, 20);
           missionImg02.addEventListener('animationend', () => {
+            missionImg02.src = "video/mission02.gif";
             missionDes02.classList.add('missionLineAni');
             missionDes02.style.animationDuration = '0.7s';
           })
@@ -392,7 +498,7 @@ export function index() {
           collectionMockup01.classList.add('show');
           collectionMockup01.addEventListener('animationend', () => {
             collectionMockup02.classList.add('missionLineAni');
-            collectionMockup02.style.animationDuration = '0.9s';
+            collectionMockup02.style.animationDuration = '0.6s';
           })
           collectionMockup02.addEventListener('animationend', () => {
             collectionTxt.classList.add('symbolSloganShow');
@@ -402,13 +508,16 @@ export function index() {
             collectionImg01.style.animationDuration = '0.6s';
             setTimeout(() => {
               collectionImg02.classList.add('opacity');
+              collectionImg02.style.animationDuration = '0.7s';
               setTimeout(() => {
                 collectionImg03.classList.add('opacity');
+                collectionImg03.style.animationDuration = '0.7s';
                 setTimeout(() => {
                   collectionImg04.classList.add('opacity');
-                }, 600)
-              }, 600)
-            }, 600)
+                  collectionImg04.style.animationDuration = '0.7s';
+                }, 300)
+              }, 300)
+            }, 300)
           })
         }
 
@@ -421,6 +530,9 @@ export function index() {
           communityTxt.addEventListener('animationend', () => {
             communityTxtImg.classList.add('show');
             communityImg.classList.add('show');
+            communityImg.addEventListener('animationend', () => {
+              communityImg.src = "video/feed.gif";
+            })
           })
         }
 

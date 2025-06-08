@@ -72,7 +72,7 @@
   }
 
   100% {
-    transform: translateY(4vh);
+    transform: translateY(1.5vh);
   }
 }
 
@@ -82,7 +82,7 @@
   }
 
   100% {
-    transform: translateY(-4vh);
+    transform: translateY(-1.5vh);
   }
 }
 
@@ -162,7 +162,7 @@
 }
 
 .show {
-  animation: show 1s linear forwards;
+  animation: show 0.5s linear forwards;
 }
 
 .BoxShow {
@@ -170,7 +170,7 @@
 }
 
 .symbolSloganShow {
-  animation: symbolSloganShow 0.7s linear forwards;
+  animation: symbolSloganShow 0.5s linear forwards;
 }
 
 
@@ -187,7 +187,7 @@
 }
 
 .showDown {
-  animation: showDown 0.7s linear forwards;
+  animation: showDown 0.5s linear forwards;
 }
 
 @keyframes showDown {
@@ -203,8 +203,9 @@
 }
 
 .onboardingMockupShow {
-  animation: onboardingMockup 1s linear forwards;
+  animation: onboardingMockup 0.7s linear forwards;
 }
+
 
 @keyframes onboardingMockup {
   0% {
@@ -215,6 +216,22 @@
   100% {
     opacity: 1;
     transform: translate(-9%, -20px);
+  }
+}
+
+.onboardingGif {
+  animation: onboardingGif 0.7s linear forwards;
+}
+
+@keyframes onboardingGif {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
   }
 }
 
@@ -304,7 +321,7 @@
 }
 
 .missionLineAni {
-  animation: missionLineAni 0.5s linear forwards;
+  animation: missionLineAni 0.4s linear forwards;
 }
 
 @keyframes missionLineAni {
@@ -330,7 +347,7 @@
 }
 
 .homeMockupShow {
-  animation: homeMockupShow 1s linear forwards;
+  animation: homeMockupShow 0.7s linear forwards;
 }
 
 @keyframes homeMockupShow {
