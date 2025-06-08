@@ -8,6 +8,7 @@ export function index() {
   const mainBadge03 = document.getElementById("Badge03");
   const mainBadge04 = document.getElementById("Badge04");
   const video = document.getElementById("video");
+  const playBtn = document.getElementById("playBtn");
   const overview = document.querySelector(".overview");
   const overviewGraph = document.querySelector(".overviewGraph");
   const overviewScreen = document.getElementById("overviewScreen");
@@ -82,6 +83,10 @@ export function index() {
   const myPageMockup = document.getElementById("myPageMockup");
   const myPageTitle = document.querySelector("#myPageTitle div");
   const myPageTxt = document.querySelector("#myPageTitle p");
+  const box01 = document.getElementById("box01");
+  const box02 = document.getElementById("box02");
+  const box03 = document.getElementById("box03");
+  const box04 = document.getElementById("box04");
 
   navLogo.addEventListener('mouseover', () => {
     navLogo.src = "img/navLogoHover.png";
@@ -121,14 +126,17 @@ export function index() {
     mainBadge04.style.animation = "UpDown02 1.7s ease-in-out infinite alternate";
   });
 
+  // 버튼 클릭 시 → 영상 재생 + 버튼 숨기기
+  playBtn.addEventListener("click", () => {
+    video.play(); // 영상 재생
+    playBtn.style.display = "none"; // 버튼 숨김
+  });
+
+  // 영상 클릭 시 → 재생 중이면 멈추고 버튼 보이게
   video.addEventListener("click", () => {
-    // video를 클릭했을 때 실행되는 함수
-    if (video.paused) {
-      // 만약 현재 정지 상태라면
-      video.play(); // 재생시킴
-    } else {
-      // 재생 중이라면
-      video.pause(); // 정지시킴
+    if (!video.paused) {
+      video.pause(); // 영상 멈춤
+      playBtn.style.display = "block"; // 버튼 다시 보임
     }
   });
 
@@ -197,6 +205,18 @@ export function index() {
             })
           }, 1200)
         }
+
+        // box03.addEventListener("mouseenter", () => {
+        //   box01.style.backgroundImage = 'url("img/Target01Hover.png")';
+        //   box01.style.color = "#fff";
+        //   box01.style.fontWeight = "500";
+        // });
+
+        // box03.addEventListener("mouseleave", () => {
+        //   box01.style.backgroundImage = 'url("img/Target01.png")';
+        //   box01.style.color = "#000";
+        //   box01.style.fontWeight = "600";
+        // });
 
         //UX 플로우
         if (entry.target.classList.contains('UXflow')) {

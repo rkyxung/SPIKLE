@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    div {
+      position: relative;
+      width: 21vw;
+      height: 76.2vh;
+      top: 10vh;
+      left: 10vw;
+
+    }
+
+    #video {
+      position: absolute;
+      width: 94.5%;
+      height: auto;
+      z-index: 99;
+      top: 1.5%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius:10px;
+      
+    }
+
+    #phone {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      z-index: 100;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <img id="phone" src="./phone.png" id="phone" />
+    <img id="video" src="./mission03Crop.gif" autoplay muted loop playsinline></img>
+  </div>
+</body>
+
+</html>
