@@ -12,7 +12,7 @@ export function index() {
   const video = document.getElementById("video");
   const playBtn = document.getElementById("playBtn");
   const overview = document.querySelector(".overview");
-  const overviewGraph = document.querySelector(".overviewGraph");
+  const overviewGraph = document.querySelector("#graph");
   const overviewScreen = document.getElementById("overviewScreen");
   const servey = document.querySelector(".onlineServey");
   const serveyInsight = document.querySelector(".insight");
@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
           overview.classList.add('opacity');
           setTimeout(() => {
             overviewScreen.classList.add('fadeScreen')
-          }, 1200);
+          }, 800);
         }
 
         //서베이
@@ -252,16 +252,17 @@ document.addEventListener("DOMContentLoaded", () => {
           serveyNeeds.style.opacity = '0';
           setTimeout(() => {
             serveyInsight.classList.add('opacity');
-            serveyInsight.style.animationDuration = '0.8s';
-          }, 700);
+            serveyInsight.style.animationDuration = '0.6s';
+          }, 400);
         }
         if (entry.target.classList.contains('painpoint')) {
           serveyPainpoint.classList.add('opacity');
+          serveyPainpoint.style.animationDuration = '0.6s';
           insight.style.opacity = '0';
           setTimeout(() => {
             serveyNeeds.classList.add('opacity');
-            serveyInsight.style.animationDuration = '0.8s';
-          }, 600);
+            serveyNeeds.style.animationDuration = '0.6s';
+          }, 400);
         }
 
         //인사이트

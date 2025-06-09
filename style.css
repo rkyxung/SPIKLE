@@ -180,7 +180,7 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  font-size: 1.28vw;
+  font-size: 1.55vw;
   opacity: 0;
   animation: LogoFadeIn 2s ease-in forwards;
 }
@@ -331,7 +331,7 @@ nav {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 #overview {
@@ -368,6 +368,7 @@ nav {
   font-weight: 400;
   text-align: center;
   line-height: 160%;
+  
 }
 
 .overviewGraph {
