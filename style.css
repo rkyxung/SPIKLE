@@ -167,11 +167,11 @@ nav {
 }
 
 #Slogan {
-  top: 12.1vh;
+  top: 12.9vh;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  font-size: 1.458vw;
+  font-size: 1.4vw;
   opacity: 0;
   animation: LogoFadeIn 2s ease-in forwards;
 }
