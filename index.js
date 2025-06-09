@@ -13,7 +13,6 @@ export function index() {
   const playBtn = document.getElementById("playBtn");
   const overview = document.querySelector(".overview");
   const overviewGraph = document.querySelector("#graph");
-  const overviewScreen = document.getElementById("overviewScreen");
   const servey = document.querySelector(".onlineServey");
   const serveyInsight = document.querySelector(".insight");
   const serveyPainpoint = document.querySelector(".painpoint");
@@ -239,9 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
         //오버뷰
         if (entry.target.classList.contains('overview')) {
           overview.classList.add('opacity');
-          setTimeout(() => {
-            overviewScreen.classList.add('fadeScreen')
-          }, 800);
+
         }
 
         //서베이
