@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
           setTimeout(() => {
             serveyInsight.classList.add('opacity');
             serveyInsight.style.animationDuration = '0.6s';
-          }, 400);
+          }, 500);
         }
         if (entry.target.classList.contains('painpoint')) {
           serveyPainpoint.classList.add('opacity');
@@ -269,7 +269,8 @@ document.addEventListener("DOMContentLoaded", () => {
             insightLine.addEventListener("animationend", () => {
               setTimeout(() => {
                 insight.classList.add('insightAni');
-              }, 200);
+                insight.style.animationDuration = '0.4s';
+              }, 300);
             })
           }, 500);
 
@@ -293,7 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
             targetBox03.addEventListener('animationend', () => {
               targetBox04.classList.add('BoxShow');
             })
-          }, 700)
+          }, 600)
         }
 
         // box03.addEventListener("mouseenter", () => {
@@ -321,18 +322,15 @@ document.addEventListener("DOMContentLoaded", () => {
         //심볼
         if (entry.target.classList.contains('Symbol')) {
           symbol.classList.add('show');
-          symbolLogo.style.opacity = '0';
           symbolSlogan.style.opacity = '0';
           symbolImgs.style.opacity = '0';
           symbol.addEventListener('animationend', () => {
-            symbolLogo.classList.add('opacity');
-            symbolLogo.style.animationDuration = '0.8s';
             setTimeout(() => {
               symbolSlogan.classList.add('symbolSloganShow');
             }, 500)
-            symbolLogo.addEventListener('animationend', () => {
+            symbolSlogan.addEventListener('animationend', () => {
               symbolImgs.classList.add('show');
-              symbolImgs.style.animationDuration = '0.7s';
+              symbolImgs.style.animationDuration = '0.5s';
             })
           })
         }
@@ -349,7 +347,7 @@ document.addEventListener("DOMContentLoaded", () => {
           })
           font.addEventListener('animationend', () => {
             colors.classList.add('show');
-            colors.style.animationDuration = '0.7s';
+            colors.style.animationDuration = '0.5s';
           })
 
           colors.addEventListener('animationend', () => {
@@ -370,7 +368,7 @@ document.addEventListener("DOMContentLoaded", () => {
               conceptMockup.classList.remove('show');
               conceptMockup.style.opacity = '1';
               conceptMockup.classList.add('UpDown01');
-            }, 1000);
+            }, 700);
           })
           // conceptMockup.addEventListener('animationend', () => {
           //   conceptMockup.classList.remove('show');
@@ -391,7 +389,6 @@ document.addEventListener("DOMContentLoaded", () => {
           })
           onboarding.addEventListener('animationend', () => {
             onboardingTxt.classList.add('symbolSloganShow');
-            onboardingTxt.style.animationDuration = '0.7s';
           })
           onboardingTxt.addEventListener('animationend', () => {
             onboardingMockup.classList.add('onboardingMockupShow');
@@ -409,7 +406,6 @@ document.addEventListener("DOMContentLoaded", () => {
           missionSectionTxt.style.opacity = '0';
           Home.addEventListener('animationend', () => {
             HomeTxt.classList.add('symbolSloganShow');
-            HomeTxt.style.animationDuration = '0.7s';
           })
           HomeTxt.addEventListener('animationend', () => {
             HomeMockup.classList.add('homeMockupShow');
@@ -425,7 +421,6 @@ document.addEventListener("DOMContentLoaded", () => {
           });
           missionSectionTxt.addEventListener('animationend', () => {
             HomeLineGraph.classList.add('missionLineAni');
-            HomeLineGraph.style.animationDuration = '0.6s'
           })
           HomeLineGraph.addEventListener('animationend', () => {
             HomeLineGraphTxt.classList.add('symbolSloganShow');
@@ -441,7 +436,6 @@ document.addEventListener("DOMContentLoaded", () => {
           })
           tipLine.addEventListener('animationend', () => {
             tipSectionTxt.classList.add('symbolSloganShow');
-            tipSectionTxt.style.animationDuration = '0.5s'
           })
         }
 

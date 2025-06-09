@@ -162,15 +162,15 @@
 }
 
 .show {
-  animation: show 0.5s linear forwards;
+  animation: show 0.4s linear forwards;
 }
 
 .BoxShow {
-  animation: show 0.6s linear forwards;
+  animation: show 0.4s linear forwards;
 }
 
 .symbolSloganShow {
-  animation: symbolSloganShow 0.5s linear forwards;
+  animation: symbolSloganShow 0.4s linear forwards;
 }
 
 
@@ -187,7 +187,7 @@
 }
 
 .showDown {
-  animation: showDown 0.5s linear forwards;
+  animation: showDown 0.4s linear forwards;
 }
 
 @keyframes showDown {
@@ -203,7 +203,7 @@
 }
 
 .onboardingMockupShow {
-  animation: onboardingMockup 0.7s linear forwards;
+  animation: onboardingMockup 0.5s linear forwards;
 }
 
 
@@ -220,7 +220,7 @@
 }
 
 .onboardingGif {
-  animation: onboardingGif 0.7s linear forwards;
+  animation: onboardingGif 0.5s linear forwards;
 }
 
 @keyframes onboardingGif {
@@ -248,7 +248,7 @@
 }
 
 .insightAni {
-  animation: insightAni 0.4s linear forwards;
+  animation: insightAni 0.3s linear forwards;
 }
 
 @keyframes insightAni {
@@ -264,11 +264,11 @@
 }
 
 .subColor01 {
-  animation: sub01 0.7s linear forwards;
+  animation: sub01 0.5s linear forwards;
 }
 
 .subColor02 {
-  animation: sub02 1.4s linear forwards;
+  animation: sub02 1s linear forwards;
 }
 
 @keyframes sub01 {
@@ -305,7 +305,7 @@
 }
 
 .onboardingLine {
-  animation: onboardingLine 1.5s linear forwards;
+  animation: onboardingLine 0.8s linear forwards;
 }
 
 @keyframes onboardingLine {

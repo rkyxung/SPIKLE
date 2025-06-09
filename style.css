@@ -1060,11 +1060,11 @@ nav {
 .marquee-track {
   display: flex;
   width: fit-content;
-  animation: scrollLeft 22s linear infinite;
+  animation: scrollLeft 24s linear infinite;
 }
 
 .marquee-track.reverse {
-  animation: scrollRight 23.5s linear infinite;
+  animation: scrollRight 26.5s linear infinite;
 }
 
 .marquee-content {
