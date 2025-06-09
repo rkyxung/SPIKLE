@@ -321,7 +321,7 @@
 }
 
 .missionLineAni {
-  animation: missionLineAni 0.4s linear forwards;
+  animation: missionLineAni 0.3s linear forwards;
 }
 
 @keyframes missionLineAni {
@@ -347,7 +347,7 @@
 }
 
 .homeMockupShow {
-  animation: homeMockupShow 0.7s linear forwards;
+  animation: homeMockupShow 0.5s linear forwards;
 }
 
 @keyframes homeMockupShow {

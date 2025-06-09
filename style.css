@@ -43,15 +43,6 @@ body {
   scroll-behavior: smooth;
 }
 
-#original {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  opacity: .5;
-  display: none;
-}
 
 /*----------------------------- 헤더 -----------------------------*/
 
@@ -180,7 +171,7 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  font-size: 1.55vw;
+  font-size: 1.458vw;
   opacity: 0;
   animation: LogoFadeIn 2s ease-in forwards;
 }
@@ -899,13 +890,13 @@ nav {
 }
 
 #fontKOR img {
-  padding: 8vh 0 1vh;
-  width: 18vw;
+  padding: 8vh 0 4vh;
+  width: 19vw;
 }
 
 #fontENG img {
-  padding: 8vh 0 1vh;
-  width: 15.5vw;
+  padding: 8vh 0 1.5vh;
+  width: 18vw;
 }
 
 #color {
@@ -1060,11 +1051,11 @@ nav {
 .marquee-track {
   display: flex;
   width: fit-content;
-  animation: scrollLeft 24s linear infinite;
+  animation: scrollLeft 33s linear infinite;
 }
 
 .marquee-track.reverse {
-  animation: scrollRight 26.5s linear infinite;
+  animation: scrollRight 37s linear infinite;
 }
 
 .marquee-content {
@@ -1149,9 +1140,9 @@ nav {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: -8.5vh;
+  margin-top: -10vh;
   width: 0.125vw;
-  height: 52.6vh;
+  height: 51vh;
   z-index: -2;
 }
 
@@ -1171,7 +1162,7 @@ nav {
 #onboardingTxt {
 
   max-width: 81.25%;
-  margin: 0.8vw auto;
+  margin: 2vw auto;
   overflow: hidden;
 }
 

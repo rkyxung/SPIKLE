@@ -464,7 +464,7 @@ document.addEventListener("DOMContentLoaded", () => {
             missionImg03.addEventListener('animationend', () => {
               missionImg03.src = "video/mission03.gif";
               missionDes03.classList.add('missionLineAni');
-              missionDes03.style.animationDuration = '0.7s';
+              missionDes03.style.animationDuration = '0.5s';
             })
           })
         }
@@ -476,21 +476,21 @@ document.addEventListener("DOMContentLoaded", () => {
           missionImg02.addEventListener('animationend', () => {
             missionImg02.src = "video/mission02.gif";
             missionDes02.classList.add('missionLineAni');
-            missionDes02.style.animationDuration = '0.7s';
+            missionDes02.style.animationDuration = '0.5s';
           })
         }
         if (entry.target.id === "mission04") {
           missionImg04.classList.add('show');
           missionImg04.addEventListener('animationend', () => {
             missionDes04.classList.add('missionLineAni');
-            missionDes04.style.animationDuration = '0.7s';
+            missionDes04.style.animationDuration = '0.5s';
           })
         }
         if (entry.target.id === "CollectionMockup01") {
           collectionMockup01.classList.add('show');
           collectionMockup01.addEventListener('animationend', () => {
             collectionMockup02.classList.add('missionLineAni');
-            collectionMockup02.style.animationDuration = '0.6s';
+            collectionMockup02.style.animationDuration = '0.4s';
           })
           collectionMockup02.addEventListener('animationend', () => {
             collectionTxt.classList.add('symbolSloganShow');
