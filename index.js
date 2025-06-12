@@ -62,6 +62,7 @@ export function index() {
   const AIcamera = document.getElementById("cameraImg");
   const AItitle = document.querySelector("#cameraTitle div");
   const AItxt = document.querySelector("#cameraTitle p");
+  const AIspan = document.querySelector("#cameraTitle span");
   const MissionSectionTitle = document.getElementById("missionTitle");
   const MissionSectionText = document.querySelector("#missionTitle p");
   const missionImg03 = document.getElementById("mission03")
@@ -80,11 +81,13 @@ export function index() {
   const collectionImg04 = document.getElementById("collectionImg04");
   const communityTitle = document.querySelector("#communityTitle");
   const communityTxt = document.querySelector("#communityTitle p");
+  const communitySpan = document.querySelector("#communityTitle span");
   const communityImg = document.getElementById("communityImg");
   const communityTxtImg = document.getElementById("communityTxt");
   const myPageMockup = document.getElementById("myPageMockup");
   const myPageTitle = document.querySelector("#myPageTitle div");
   const myPageTxt = document.querySelector("#myPageTitle p");
+  const myPageSpan = document.querySelector("#myPageTitle span");
   const navVideo = document.getElementById("nav01");
   const navProject = document.getElementById("nav02");
   const navDesign = document.getElementById("nav03");
@@ -139,27 +142,27 @@ export function index() {
     });
   });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector("header"); // 헤더 요소 선택
-  const mainBanner = document.querySelector(".mainBanner"); // 메인배너 선택
-  const scrollWrapper = document.querySelector(".scroll-wrapper"); // 스크롤랩퍼 선택
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector("header"); // 헤더 요소 선택
+    const mainBanner = document.querySelector(".mainBanner"); // 메인배너 선택
+    const scrollWrapper = document.querySelector(".scroll-wrapper"); // 스크롤랩퍼 선택
 
-  scrollWrapper.addEventListener("scroll", () => {
-    const scrollY = scrollWrapper.scrollTop; // scroll-wrapper 내부 스크롤 위치
-    const mainBannerHeight = mainBanner.offsetHeight; // 메인배너 전체 높이
-    const hidePoint = mainBannerHeight / 2; // 메인배너 중간 지점 기준으로 숨김 판단
+    scrollWrapper.addEventListener("scroll", () => {
+      const scrollY = scrollWrapper.scrollTop; // scroll-wrapper 내부 스크롤 위치
+      const mainBannerHeight = mainBanner.offsetHeight; // 메인배너 전체 높이
+      const hidePoint = mainBannerHeight / 2; // 메인배너 중간 지점 기준으로 숨김 판단
 
-    if (scrollY >= hidePoint) {
-      // 중간 아래로 내려갔으면 헤더 숨김
-      header.style.opacity = "0";
-      header.style.pointerEvents = "none";
-    } else {
-      // 중간 이상 올라왔으면 헤더 다시 보이게
-      header.style.opacity = "1";
-      header.style.pointerEvents = "auto";
-    }
+      if (scrollY >= hidePoint) {
+        // 중간 아래로 내려갔으면 헤더 숨김
+        header.style.opacity = "0";
+        header.style.pointerEvents = "none";
+      } else {
+        // 중간 이상 올라왔으면 헤더 다시 보이게
+        header.style.opacity = "1";
+        header.style.pointerEvents = "auto";
+      }
+    });
   });
-});
 
 
 
@@ -442,6 +445,7 @@ document.addEventListener("DOMContentLoaded", () => {
         //AI카메라
         if (entry.target.id === "cameraImg") {
           AIcamera.classList.add('show');
+          AIspan.style.opacity = '0';
           AIcamera.addEventListener('animationend', () => {
             AIcamera.src = "video/cameraMockUp.gif"
           }, 100);
@@ -450,6 +454,9 @@ document.addEventListener("DOMContentLoaded", () => {
           })
           AItitle.addEventListener('animationend', () => {
             AItxt.classList.add('symbolSloganShow');
+          })
+          AItxt.addEventListener('animationend', () => {
+            AIspan.classList.add('symbolSloganShow');
           })
         }
 
@@ -515,11 +522,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //커뮤니티섹션
         if (entry.target.id === "communityTitle") {
+          communitySpan.style.opacity = '0';
           communityTitle.classList.add('symbolSloganShow');
           communityTitle.addEventListener('animationend', () => {
             communityTxt.classList.add('symbolSloganShow');
           })
           communityTxt.addEventListener('animationend', () => {
+            communitySpan.classList.add('symbolSloganShow');
+          })
+          communitySpan.addEventListener('animationend', () => {
             communityTxtImg.classList.add('show');
             communityImg.classList.add('show');
             communityImg.addEventListener('animationend', () => {
@@ -530,11 +541,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //마이페이지섹션
         if (entry.target.id === "myPageMockup") {
+          myPageSpan.style.opacity = '0';
           myPageTitle.classList.add('symbolSloganShow');
           myPageTitle.addEventListener('animationend', () => {
             myPageTxt.classList.add('symbolSloganShow');
           })
           myPageTxt.addEventListener('animationend', () => {
+            myPageSpan.classList.add('symbolSloganShow');
+          })
+          myPageSpan.addEventListener('animationend', () => {
             myPageMockup.classList.add('show');
           })
         }

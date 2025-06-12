@@ -44,6 +44,7 @@ body {
 }
 
 
+
 /*----------------------------- 헤더 -----------------------------*/
 
 header {
@@ -1421,7 +1422,7 @@ nav {
 }
 
 #cameraTitle {
-  margin: 5.5vh 0 0 29vw;
+  margin: 15vh 0 0 30.1vw;
 }
 
 #cameraTitle div {
@@ -1438,6 +1439,15 @@ nav {
   color: #fff;
   line-height: 150%;
   opacity: 0;
+}
+
+#cameraTitle span {
+  display: block;
+  color: rgba( 255, 255, 255, .9);
+  font-size: 1.04vw;
+  margin-top: 2vw;
+  line-height: 160%;
+  font-weight: 400;
 }
 
 #cameraImg {
@@ -1716,6 +1726,15 @@ nav {
   opacity: 0;
 }
 
+#communityTitle span {
+  display: block;
+  color: rgba( 255, 255, 255, .9);
+  font-size: 1.04vw;
+  margin-top: 2vw;
+  line-height: 160%;
+  font-weight: 400;
+}
+
 #communityImg {
   position: relative;
   display: flex;
@@ -1776,10 +1795,14 @@ nav {
   background-color: #111111;
 }
 
+#maPageTitle {
+  margin-left: 3vw;
+}
+
 #myPageTitle div {
   font-size: 1.04vw;
   color: #C8FF04;
-  margin-top: 5vh;
+  margin-top: 22vh;
   opacity: 0;
 }
 
@@ -1789,6 +1812,15 @@ nav {
   color: #fff;
   line-height: 150%;
   opacity: 0;
+}
+
+#myPageTitle span {
+  display: block;
+  color: rgba( 255, 255, 255, .9);
+  font-size: 1.04vw;
+  margin-top: 2vw;
+  line-height: 160%;
+  font-weight: 400;
 }
 
 
