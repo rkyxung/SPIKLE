@@ -1403,7 +1403,7 @@ header {
 }
 
 #cameraTitle {
-  margin: 15vh 0 0 30.1vw;
+  margin: 14.7vh 0 0 30.1vw;
 }
 
 #cameraTitle div {
@@ -1771,7 +1771,7 @@ header {
   max-width: 81.25%;
   margin: 19.5vh auto;
   display: flex;
-  gap: 6.5vw;
+  gap: 8vw;
   overflow: hidden;
   background-color: #111111;
 }
@@ -1783,7 +1783,7 @@ header {
 #myPageTitle div {
   font-size: 1.04vw;
   color: #C8FF04;
-  margin-top: 22vh;
+  margin-top: 14.7vh;
   opacity: 0;
 }
 
