@@ -361,3 +361,17 @@
     transform: translate(-25%, 0);
   }
 }
+
+.playBtnAni {
+  animation: playBtnAni 0.5s linear forwards;
+}
+
+@keyframes playBtnAni {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

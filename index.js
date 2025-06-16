@@ -224,13 +224,35 @@ export function index() {
     playBtn.style.display = "none";
   });
 
-
   video.addEventListener("click", () => {
     if (!video.paused) {
-      video.pause();
+      playBtn.src = "img/pauseBtn.png";
       playBtn.style.display = "block";
+      playBtn.classList.add("playBtnAni");
+      video.pause();
+    } 
+    else {
+      playBtn.src = "img/playBtn.png";
+      playBtn.style.display = "block";
+      playBtn.classList.add("playBtnAni");
+      video.play();
     }
   });
+
+  playBtn.addEventListener("animationend", () => {
+    playBtn.style.display = "none";
+    playBtn.style.opacity = "0.5";
+    playBtn.classList.remove("playBtnAni");
+  });
+
+  // video.addEventListener("mouseenter", () => {
+  //   playBtn.src = "img/pauseBtn.png"; // 재생 버튼의 이미지를 hover 이미지로 변경
+  // });
+
+  // // 비디오에서 마우스를 떼면 실행됨
+  // video.addEventListener("mouseleave", () => {
+  //   playBtn.src = "img/playBtn.png"; // 재생 버튼의 이미지를 원래대로 되돌림
+  // });
 
   const observer = new IntersectionObserver((entries) => {
     // entries: 화면에 들어온 감지 대상들 배열
