@@ -87,7 +87,7 @@ header {
 #nav li:hover {
   color: #111111;
   background-color: #C8FF04;
-  font-weight: 500;
+  -webkit-text-stroke: 0.02vw #111111;
 }
 
 
