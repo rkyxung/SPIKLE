@@ -98,6 +98,7 @@ nav {
 #nav li:hover {
   color: #111111;
   background-color: #C8FF04;
+  font-weight: 500;
 }
 
 /* #nav01 {
