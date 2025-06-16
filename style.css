@@ -62,25 +62,14 @@ header {
 }
 
 
-nav {
-  position: absolute;
-  right: 0;
-  /* 566px */
-  width: 29.3vw;
-  /* 40px */
-  height: 3.7vh;
-}
 
 #nav {
   right: 0;
-  /* 566px */
-  width: 29.3vw;
-  /* 40px */
-  height: 3.7vh;
-  padding: 0;
+  padding: 0 ;
+  /* margin-top: 1vw; */
   display: flex;
   flex-direction: row;
-  /* gap: 2.8vw; */
+  gap: 0.7vw;
   background-color: #111111;
   border: 0.08vw solid #C8FF04;
   border-radius: 20px;
@@ -101,25 +90,6 @@ nav {
   font-weight: 500;
 }
 
-/* #nav01 {
-  padding: 0.14vw 0.8vw;
-  margin-right: 1vw;
-}
-
-#nav02 {
-  padding: 0.14vw 0.8vw;
-  margin-right: 1vw;
-}
-
-#nav03 {
-  padding: 0.14vw 0.8vw;
-  margin-right: 1vw;
-}
-
-#nav04 {
-  padding: 0.14vw 0.8vw;
-  margin-right: 1vw;
-} */
 
 #nav li {
   font-family: "Poppins";
@@ -128,17 +98,19 @@ nav {
   font-size: 1.1vw;
   list-style: none;
   font-weight: 400;
-  padding: 0.14vw 1.8vw;
+  padding: 0.09vw 1.4vw;
   background-color: #111;
   border-radius: 20px;
-
+  text-align: center;
+  /* display: inline-block;
+  min-width: 7.8vw; */
 }
 
 #navLogo {
   /* position: absolute; */
   /* left: 6.7vw; */
-  width: 2.9vw;
-  height: auto;
+  width: 2.8vw;
+  height: 2.8vw;
   border-radius: 100%;
   cursor: pointer;
 }
@@ -246,13 +218,17 @@ nav {
 
 /* ----------------------------- 스크롤인터렉션 섹션 ----------------------------- */
 .scroll-wrapper {
-  scroll-snap-type: y mandatory;  /* 세로 방향 스냅 고정 */
+  scroll-snap-type: y mandatory;
+  /* 세로 방향 스냅 고정 */
   overflow-y: scroll;
   height: 100vh;
   scroll-behavior: auto;
 }
-.mainBanner, .video {
-  scroll-snap-align: start;       /* 각각 스냅 기준점 지정 */
+
+.mainBanner,
+.video {
+  scroll-snap-align: start;
+  /* 각각 스냅 기준점 지정 */
   height: 100vh;
 }
 
@@ -361,7 +337,7 @@ nav {
   font-weight: 400;
   text-align: center;
   line-height: 160%;
-  
+
 }
 
 .overviewGraph {
@@ -1444,7 +1420,7 @@ nav {
 
 #cameraTitle span {
   display: block;
-  color: rgba( 255, 255, 255, .9);
+  color: rgba(255, 255, 255, .9);
   font-size: 1.04vw;
   margin-top: 2vw;
   line-height: 160%;
@@ -1729,7 +1705,7 @@ nav {
 
 #communityTitle span {
   display: block;
-  color: rgba( 255, 255, 255, .9);
+  color: rgba(255, 255, 255, .9);
   font-size: 1.04vw;
   margin-top: 2vw;
   line-height: 160%;
@@ -1817,7 +1793,7 @@ nav {
 
 #myPageTitle span {
   display: block;
-  color: rgba( 255, 255, 255, .9);
+  color: rgba(255, 255, 255, .9);
   font-size: 1.04vw;
   margin-top: 2vw;
   line-height: 160%;
